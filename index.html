@@ -806,14 +806,14 @@
             <!-- Cloud DB Status & Settings Button -->
             <button id="openCloudDbModalBtn" type="button" class="px-3.5 py-2.5 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 text-xs font-bold flex items-center gap-2 transition shadow-sm">
               <span id="cloudStatusIcon">🗄️</span>
-              <span id="cloudStatusText">قاعدة البيانات السحابية (Firebase)</span>
+              <span id="cloudStatusText">قاعدة بيانات Supabase</span>
               <span id="cloudStatusDot" class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
             </button>
 
             <!-- Sync Now Button -->
             <button id="syncCloudDbBtn" type="button" class="px-3.5 py-2.5 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/40 text-xs font-bold flex items-center gap-1.5 transition">
               <span id="syncIcon" class="inline-block transition-transform duration-500">🔄</span>
-              <span>مزامنة السحابة</span>
+              <span>تحديث البيانات</span>
             </button>
 
             <!-- Discord Webhook -->
@@ -946,139 +946,38 @@
   </div>
 
   <!-- ==================== DISCORD WEBHOOK MODAL ==================== -->
-    <!-- ==================== CLOUD DATABASE MODAL ==================== -->
+    <!-- ==================== SUPABASE STATUS MODAL ==================== -->
   <div id="cloudDbModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 overflow-y-auto">
-    <div class="glass-card rounded-3xl max-w-2xl w-full p-6 sm:p-8 space-y-6 border border-amber-500/40 shadow-2xl my-8 text-right" dir="rtl">
-      <!-- Modal Header -->
-      <div class="flex items-center justify-between border-b border-gray-800 pb-3">
-        <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl font-bold border border-amber-500/30 shrink-0">
-            🗄️
-          </div>
-          <div>
-            <h3 class="text-xl font-black text-white">إدارة وحفظ قاعدة البيانات (سحابية ومحلية دائمية)</h3>
-            <p class="text-xs text-gray-400">حفظ تلقائي دائم لجميع الطلبات لضمان عدم مسح أي بيانات على الإطلاق</p>
-          </div>
-        </div>
-        <button id="closeCloudDbModalBtn" type="button" class="text-gray-400 hover:text-white text-xl font-bold p-1 transition">✕</button>
-      </div>
-
-      <!-- Current Storage Health Status Box -->
-      <div class="p-4 rounded-2xl bg-gray-950/70 border border-gray-800 space-y-3">
-        <div class="flex flex-wrap items-center justify-between gap-2">
-          <span class="text-xs font-bold text-gray-300">حالة قاعدة البيانات الحالية:</span>
-          <span id="modalCloudStatusBadge" class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-            قاعدة بيانات محلية دائمية (IndexedDB نشط)
-          </span>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1 text-xs">
-          <div class="p-3 rounded-xl bg-gray-900 border border-gray-800 space-y-1">
-            <span class="text-gray-400 block text-[11px]">الذاكرة الدائمة (IndexedDB)</span>
-            <span class="font-bold text-emerald-400 flex items-center gap-1">
-              <span>نشطة ومحمية</span>
-              <span>🛡️</span>
-            </span>
-          </div>
-          <div class="p-3 rounded-xl bg-gray-900 border border-gray-800 space-y-1">
-            <span class="text-gray-400 block text-[11px]">عدد الطلبات المحفوظة</span>
-            <span id="modalSavedCount" class="font-bold text-amber-400 font-mono text-sm">0 طلب</span>
-          </div>
-          <div class="p-3 rounded-xl bg-gray-900 border border-gray-800 space-y-1">
-            <span class="text-gray-400 block text-[11px]">المزامنة بين الأجهزة</span>
-            <span id="modalSyncState" class="font-bold text-gray-300 text-xs">محلية فقط</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Explanation & How It Works -->
-      <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-orange-500/5 to-transparent border border-amber-500/20 space-y-2">
-        <h4 class="text-xs sm:text-sm font-black text-amber-300 flex items-center gap-1.5">
-          <span>💡</span> كيف تضمن وصول طلبات جميع اللاعبين من هواتفهم إلى جهازك؟
-        </h4>
-        <p class="text-xs text-gray-300 leading-relaxed">
-          الموقع مجهز بنظامين متكاملين لحفظ البيانات:
-          <br>
-          1. <strong>قاعدة بيانات المتصفح الدائمة (IndexedDB)</strong>: تعمل تلقائياً الآن وتخزن الطلبات بأمان حتى لو أغلقت المتصفح.
-          <br>
-          2. <strong>قاعدة البيانات السحابية الحية (Google Firebase)</strong>: تتيح لأي لاعب يقدم من هاتفه أن يظهر طلبه فوراً في لوحتك على أي جهاز آخر، ومجانية 100% وبدون أي سيرفر.
-        </p>
-      </div>
-
-      <!-- Cloud DB Configuration Form -->
-      <div class="space-y-4">
+    <div class="glass-card rounded-3xl max-w-lg w-full p-6 sm:p-8 space-y-5 border border-amber-500/40 shadow-2xl my-8 text-right" dir="rtl">
+      <div class="flex items-start justify-between gap-3">
         <div>
-          <label class="block text-xs font-bold text-gray-300 mb-1.5">
-            رابط قاعدة بيانات Firebase السحابية (Firebase Realtime Database REST URL)
-          </label>
-          <div class="relative">
-            <input id="cloudDbUrlInput" type="url" dir="ltr" placeholder="https://v-texas-rp-default-rtdb.firebaseio.com" class="w-full rounded-xl bg-gray-950 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-xs sm:text-sm text-white placeholder-gray-500 font-mono text-left" />
-          </div>
-          <p class="text-[11px] text-gray-400 mt-1.5">
-            ضع هنا رابط مشروعك في Firebase (مثال: <code class="text-amber-400 font-mono">https://v-texas-rp-default-rtdb.firebaseio.com</code>) أو رابط Google Apps Script Web App.
-          </p>
+          <h3 class="text-xl font-black text-white">قاعدة البيانات — Supabase</h3>
+          <p class="text-xs text-gray-400 mt-1">كل الطلبات محفوظة سحابياً في Supabase وتظهر لك مباشرة على أي جهاز.</p>
         </div>
+        <button id="closeCloudDbModalBtn" type="button" class="text-gray-400 hover:text-white text-lg font-black">✕</button>
+      </div>
 
-        <div class="flex items-center gap-2 pt-1">
-          <input id="cloudAutoSyncCheckbox" type="checkbox" checked class="w-4 h-4 rounded bg-gray-900 border-gray-700 text-amber-500 focus:ring-amber-500 cursor-pointer" />
-          <label for="cloudAutoSyncCheckbox" class="text-xs text-gray-300 cursor-pointer select-none">
-            تفعيل المزامنة التلقائية فوراً عند تقديم أي طلب جديد
-          </label>
+      <div class="flex items-center justify-between gap-3 flex-wrap">
+        <span id="modalCloudStatusBadge" class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1.5">...</span>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 text-center">
+        <div class="p-3 rounded-2xl bg-gray-900/70 border border-gray-800">
+          <p class="text-[11px] text-gray-400">عدد الطلبات المحفوظة</p>
+          <p id="modalSavedCount" class="text-lg font-black text-white mt-1">0 طلب</p>
         </div>
-
-        <!-- Connection Test Result Banner -->
-        <div id="testConnResultBox" class="hidden p-3 rounded-xl text-xs font-bold border transition"></div>
-
-        <!-- Step-by-step instructions accordion -->
-        <div class="border border-gray-800 rounded-2xl overflow-hidden">
-          <button id="toggleDbGuideBtn" type="button" class="w-full p-3.5 bg-gray-900/90 hover:bg-gray-800 text-right text-xs font-bold text-gray-300 flex items-center justify-between transition">
-            <span class="flex items-center gap-2">
-              <span>📖</span>
-              <span>دليل إعداد قاعدة بيانات Google Firebase مجاناً في دقيقتين (خطوة بخطوة)</span>
-            </span>
-            <span id="guideArrow" class="text-amber-400 transition-transform">▼</span>
-          </button>
-          <div id="dbGuideContent" class="hidden p-4 bg-gray-950/80 space-y-2.5 text-xs text-gray-300 leading-relaxed border-t border-gray-800">
-            <ol class="list-decimal list-inside space-y-2">
-              <li>افتح موقع <a href="https://console.firebase.google.com" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline font-mono">console.firebase.google.com</a> وسجل بحساب Google الخاص بك مجاناً.</li>
-              <li>اضغط على <strong>Create a project</strong> (إضافة مشروع) وسمّ المشروع <strong>v-texas-rp</strong> واضغط متابعة.</li>
-              <li>من القائمة الجانبية اختر <strong>Build</strong> ثم اضغط على <strong>Realtime Database</strong>.</li>
-              <li>اضغط <strong>Create Database</strong> واختر أي موقع (مثلاً United States) ثم اختر <strong>Start in test mode</strong>.</li>
-              <li>في تبويب <strong>Rules (القواعد)</strong> تأكد أن القراءة والكتابة مسموحة:
-                <pre class="bg-gray-900 p-2.5 rounded-lg text-[11px] font-mono text-amber-300 mt-1.5 text-left" dir="ltr">{
-  "rules": {
-    ".read": true,
-    ".write": true
-  }
-}</pre>
-                ثم اضغط زر <strong>Publish</strong> الأزرق.
-              </li>
-              <li>انسخ الرابط الذي يظهر في الأعلى مباشرة (يبدأ بـ <code class="text-amber-400">https://...firebaseio.com</code>) والصقه في الحقل أعلاه واضغط <strong>حفظ وفحص الاتصال</strong>.</li>
-            </ol>
-          </div>
+        <div class="p-3 rounded-2xl bg-gray-900/70 border border-gray-800">
+          <p class="text-[11px] text-gray-400">حالة المزامنة</p>
+          <p id="modalSyncState" class="text-sm font-black text-white mt-1">—</p>
         </div>
       </div>
 
-      <!-- Action Buttons -->
-      <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-gray-800">
-        <div class="flex flex-wrap items-center gap-2">
-          <button id="testCloudDbBtn" type="button" class="px-4 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 text-xs font-bold transition flex items-center gap-1.5">
-            <span>🧪</span>
-            <span>فحص الاتصال</span>
-          </button>
-          <button id="forceUploadLocalToCloudBtn" type="button" class="px-4 py-2.5 rounded-xl bg-cyan-950/60 hover:bg-cyan-900/60 text-cyan-300 border border-cyan-500/40 text-xs font-bold transition flex items-center gap-1.5">
-            <span>⬆️</span>
-            <span>رفع البيانات الحالية للسحابة</span>
-          </button>
-        </div>
-        <div class="flex items-center gap-2">
-          <button id="disconnectCloudDbBtn" type="button" class="px-3.5 py-2.5 rounded-xl bg-red-950/40 hover:bg-red-900/40 text-red-300 border border-red-500/30 text-xs font-bold transition">
-            إلغاء الربط
-          </button>
-          <button id="saveCloudDbSettingsBtn" type="button" class="gold-btn text-black font-black px-6 py-2.5 rounded-xl text-xs sm:text-sm shadow-lg">
-            💾 حفظ الإعدادات والمزامنة
-          </button>
-        </div>
+      <div id="testConnResultBox" class="hidden"></div>
+
+      <div class="flex flex-wrap gap-2.5 pt-1">
+        <button id="testCloudDbBtn" type="button" class="px-4 py-2.5 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/40 text-xs font-bold transition">
+          ⚡ فحص الاتصال
+        </button>
       </div>
     </div>
   </div>
@@ -1181,16 +1080,17 @@
     <!-- Application Logic -->
   <script>
     (function () {
-      const OLD_STORAGE_KEY = 'v_texas_rp_applications_v1';
-      const STORAGE_KEY = 'v_texas_rp_applications_live_v2';
       const WEBHOOK_KEY = 'v_texas_rp_webhook_v1';
-      const CLOUD_DB_KEY = 'v_texas_rp_cloud_db_url_v2';
-      const CLOUD_AUTO_SYNC_KEY = 'v_texas_rp_cloud_auto_sync_v2';
       const DISCORD_INVITE_URL = 'https://discord.gg/2na3tTWpt';
 
-      const IDB_NAME = 'VTexasRP_Database_Live';
-      const IDB_STORE = 'applications';
-      const IDB_VERSION = 2;
+      // ===== Supabase =====
+      // مفتاح anon عام بطبيعته؛ الحماية الحقيقية هي RLS + الدوال في supabase_setup.sql
+      const SUPABASE_URL = 'https://obycjdpovuxdmwqwddaq.supabase.co';
+      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ieWNqZHBvdnV4ZG13cXdkZGFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY4MDA0NjMsImV4cCI6MjEwMjM3NjQ2M30.2ijpR9GWiCjvs1bDKT4tsNXnN1jZ5zQ2LmFoVicPc6I';
+      let sbOnline = true;
+      let publicTotal = null;
+      let adminPass = '';   // تبقى بالذاكرة فقط (تضيع عند تحديث الصفحة) ولا تُخزَّن بأي مكان
+
 
       // Clean production state: zero fake/mock applications
       const defaultApplications = [];
@@ -1201,15 +1101,8 @@
       let currentStep = 1;
       let lastCreatedCode = '';
       let isAdminAuthenticated = false;
-      let dbInstance = null;
       let pendingImportData = null;
 
-      const ALLOWED_ADMIN_PASSWORDS = [
-        '/𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷 1710199',
-        '𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷 1710199',
-        '/V TEXAS RP 1710199',
-        'V TEXAS RP 1710199'
-      ];
 
       function copyTextToClipboard(text, successMsg) {
         const tempInput = document.createElement('input');
@@ -1221,218 +1114,50 @@
         showToast(successMsg || 'تم نسخ رقم التقديم بنجاح!', 'info');
       }
 
-      // ==================== INDEXEDDB ENGINE ====================
-      function openIndexedDB() {
-        return new Promise((resolve) => {
-          if (!window.indexedDB) {
-            resolve(null);
-            return;
-          }
-          try {
-            const req = window.indexedDB.open(IDB_NAME, IDB_VERSION);
-            req.onupgradeneeded = function (e) {
-              const db = e.target.result;
-              if (!db.objectStoreNames.contains(IDB_STORE)) {
-                db.createObjectStore(IDB_STORE, { keyPath: 'id' });
-              }
-            };
-            req.onsuccess = function (e) {
-              dbInstance = e.target.result;
-              resolve(dbInstance);
-            };
-            req.onerror = function () {
-              resolve(null);
-            };
-          } catch (e) {
-            resolve(null);
-          }
+      // ==================== SUPABASE ENGINE ====================
+      // كل الوصول للبيانات يتم عبر دوال RPC آمنة في Supabase (انظر supabase_setup.sql)
+      async function sbRpc(fn, args) {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/${fn}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': 'Bearer ' + SUPABASE_ANON_KEY
+          },
+          body: JSON.stringify(args || {})
         });
-      }
-
-      function idbGetAll() {
-        return new Promise((resolve) => {
-          if (!dbInstance) {
-            resolve([]);
-            return;
-          }
-          try {
-            const tx = dbInstance.transaction(IDB_STORE, 'readonly');
-            const store = tx.objectStore(IDB_STORE);
-            const req = store.getAll();
-            req.onsuccess = () => resolve(req.result || []);
-            req.onerror = () => resolve([]);
-          } catch (e) {
-            resolve([]);
-          }
-        });
-      }
-
-      function idbPut(item) {
-        return new Promise((resolve) => {
-          if (!dbInstance) {
-            resolve(false);
-            return;
-          }
-          try {
-            const tx = dbInstance.transaction(IDB_STORE, 'readwrite');
-            const store = tx.objectStore(IDB_STORE);
-            const req = store.put(item);
-            req.onsuccess = () => resolve(true);
-            req.onerror = () => resolve(false);
-          } catch (e) {
-            resolve(false);
-          }
-        });
-      }
-
-      function idbPutAll(items) {
-        return new Promise((resolve) => {
-          if (!dbInstance) {
-            resolve(false);
-            return;
-          }
-          try {
-            const tx = dbInstance.transaction(IDB_STORE, 'readwrite');
-            const store = tx.objectStore(IDB_STORE);
-            store.clear();
-            items.forEach(item => {
-              if (item && item.id) store.put(item);
-            });
-            tx.oncomplete = () => resolve(true);
-            tx.onerror = () => resolve(false);
-          } catch (e) {
-            resolve(false);
-          }
-        });
-      }
-
-      function idbClear() {
-        return new Promise((resolve) => {
-          if (!dbInstance) {
-            resolve(false);
-            return;
-          }
-          try {
-            const tx = dbInstance.transaction(IDB_STORE, 'readwrite');
-            const store = tx.objectStore(IDB_STORE);
-            store.clear();
-            tx.oncomplete = () => resolve(true);
-            tx.onerror = () => resolve(false);
-          } catch (e) {
-            resolve(false);
-          }
-        });
-      }
-
-      function requestPersistentStorage() {
-        try {
-          if (navigator.storage && navigator.storage.persist) {
-            navigator.storage.persist().catch(() => {});
-          }
-        } catch (e) {}
-      }
-
-      // ==================== CLOUD DATABASE ENGINE ====================
-      function getCloudDbUrl() {
-        try {
-          return (localStorage.getItem(CLOUD_DB_KEY) || '').trim();
-        } catch (e) {
-          return '';
-        }
-      }
-
-      function setCloudDbUrl(url) {
-        try {
-          localStorage.setItem(CLOUD_DB_KEY, (url || '').trim());
-        } catch (e) {}
-      }
-
-      function getCloudAutoSync() {
-        try {
-          return localStorage.getItem(CLOUD_AUTO_SYNC_KEY) !== 'false';
-        } catch (e) {
-          return true;
-        }
-      }
-
-      function setCloudAutoSync(enabled) {
-        try {
-          localStorage.setItem(CLOUD_AUTO_SYNC_KEY, enabled ? 'true' : 'false');
-        } catch (e) {}
-      }
-
-      function normalizeCloudUrl(url) {
-        if (!url) return '';
-        let clean = url.trim().replace(/\/+$/, '');
-        if (clean.endsWith('.json')) {
-          clean = clean.substring(0, clean.lastIndexOf('/'));
-        }
-        if (clean.endsWith('/applications')) {
-          clean = clean.substring(0, clean.lastIndexOf('/applications'));
-        }
-        return clean;
-      }
-
-      async function fetchCloudApplications() {
-        const base = normalizeCloudUrl(getCloudDbUrl());
-        if (!base) return null;
-        try {
-          const res = await fetch(`${base}/applications.json`, { cache: 'no-store' });
-          if (!res.ok) throw new Error(`HTTP ${res.status}`);
-          const data = await res.json();
-          if (!data) return [];
-          if (Array.isArray(data)) {
-            return data.filter(item => item && item.id);
-          }
-          if (typeof data === 'object') {
-            return Object.values(data).filter(item => item && item.id);
-          }
-          return [];
-        } catch (err) {
-          console.warn('Cloud DB fetch error:', err);
+        let data = null;
+        try { data = await res.json(); } catch (e) {}
+        if (!res.ok) {
+          sbOnline = false;
+          const err = new Error((data && (data.message || data.hint)) || ('HTTP ' + res.status));
+          err.status = res.status;
           throw err;
         }
+        sbOnline = true;
+        return data;
       }
 
-      async function pushApplicationToCloud(app) {
-        const base = normalizeCloudUrl(getCloudDbUrl());
-        if (!base || !app || !app.id) return false;
-        try {
-          const res = await fetch(`${base}/applications/${encodeURIComponent(app.id)}.json`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(app)
-          });
-          return res.ok;
-        } catch (e) {
-          console.warn('Cloud push failed:', e);
-          return false;
-        }
+      function sbErrorText(err) {
+        const m = (err && err.message) || '';
+        if (m.includes('too_many_attempts')) return 'محاولات دخول كثيرة. انتظر 10 دقائق ثم حاول مجدداً.';
+        if (m.includes('rate_limited')) return 'أرسلت عدة طلبات خلال الساعة الأخيرة. حاول مرة أخرى لاحقاً.';
+        if (m.includes('missing_fields')) return 'يرجى التأكد من تعبئة جميع الحقول الإلزامية.';
+        return 'تعذر الاتصال بقاعدة البيانات (Supabase). تأكد من الإنترنت وحاول مجدداً.';
       }
 
-      async function patchApplicationInCloud(appId, patch) {
-        const base = normalizeCloudUrl(getCloudDbUrl());
-        if (!base || !appId) return false;
-        try {
-          const res = await fetch(`${base}/applications/${encodeURIComponent(appId)}.json`, {
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(patch)
-          });
-          return res.ok;
-        } catch (e) {
-          console.warn('Cloud patch failed:', e);
-          return false;
+      async function fetchAdminApplications() {
+        const data = await sbRpc('admin_list_applications', { p_pass: adminPass });
+        if (data && data.error) {
+          const e = new Error(data.error);
+          e.unauthorized = true;
+          throw e;
         }
+        return Array.isArray(data) ? data : [];
       }
 
       async function syncWithCloud(silent) {
-        const cloudUrl = getCloudDbUrl();
-        if (!cloudUrl) {
-          if (!silent) showToast('لم يتم ضبط رابط قاعدة البيانات السحابية بعد.', 'error');
-          updateCloudStatusUI();
-          return;
-        }
+        if (!isAdminAuthenticated || !adminPass) return;
 
         const syncBtn = document.getElementById('syncCloudDbBtn');
         const syncIcon = document.getElementById('syncIcon');
@@ -1440,54 +1165,21 @@
         if (syncBtn) syncBtn.classList.add('opacity-75');
 
         try {
-          const cloudApps = await fetchCloudApplications();
-          if (cloudApps === null) throw new Error('تعذر جلب البيانات');
-
-          const appMap = new Map();
-          applications.forEach(a => {
-            if (a && a.id) appMap.set(a.id, a);
-          });
-
-          cloudApps.forEach(cApp => {
-            if (!cApp || !cApp.id) return;
-            if (!appMap.has(cApp.id)) {
-              appMap.set(cApp.id, cApp);
-            } else {
-              const local = appMap.get(cApp.id);
-              if (cApp.status !== local.status || (cApp.adminNote && cApp.adminNote !== local.adminNote)) {
-                appMap.set(cApp.id, Object.assign({}, local, cApp));
-              }
-            }
-          });
-
-          const cloudIds = new Set(cloudApps.map(c => c && c.id));
-          const uploadQueue = [];
-          applications.forEach(localApp => {
-            if (localApp && localApp.id && !cloudIds.has(localApp.id)) {
-              uploadQueue.push(localApp);
-            }
-          });
-
-          applications = Array.from(appMap.values());
-          applications.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
-
-          saveState();
+          applications = await fetchAdminApplications();
+          if (!applications.some(a => a.id === selectedAdminAppId)) {
+            selectedAdminAppId = applications.length ? applications[0].id : null;
+          }
+          publicTotal = applications.length;
           updateCounters();
           renderAdminDashboard();
           updateCloudStatusUI();
-
-          if (uploadQueue.length > 0) {
-            Promise.all(uploadQueue.map(a => pushApplicationToCloud(a))).catch(() => {});
-          }
-
           if (!silent) {
-            showToast(`🟢 تمت المزامنة السحابية بنجاح! تم فحص وتحديث ${applications.length} طلب.`, 'info');
+            showToast(`🟢 تمت المزامنة مع Supabase بنجاح! عدد الطلبات: ${applications.length}`, 'info');
           }
         } catch (err) {
           console.error('Sync failed:', err);
-          if (!silent) {
-            showToast('❌ تعذر إتمام المزامنة السحابية. تأكد من صحة الرابط وقواعد Firebase.', 'error');
-          }
+          updateCloudStatusUI();
+          if (!silent) showToast('❌ تعذر جلب الطلبات من Supabase. ' + sbErrorText(err), 'error');
         } finally {
           if (syncIcon) syncIcon.classList.remove('animate-spin');
           if (syncBtn) syncBtn.classList.remove('opacity-75');
@@ -1495,22 +1187,19 @@
       }
 
       function updateCloudStatusUI() {
-        const url = getCloudDbUrl();
-        const isCloud = Boolean(url);
-
         const cloudStatusText = document.getElementById('cloudStatusText');
         const cloudStatusDot = document.getElementById('cloudStatusDot');
         const cloudStatusIcon = document.getElementById('cloudStatusIcon');
 
         if (cloudStatusText && cloudStatusDot && cloudStatusIcon) {
-          if (isCloud) {
+          if (sbOnline) {
             cloudStatusIcon.textContent = '☁️';
-            cloudStatusText.textContent = 'قاعدة سحابية متصلة (Firebase)';
+            cloudStatusText.textContent = 'قاعدة بيانات Supabase (متصلة)';
             cloudStatusDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse';
           } else {
-            cloudStatusIcon.textContent = '🗄️';
-            cloudStatusText.textContent = 'قاعدة بيانات محلية دائمية (IndexedDB)';
-            cloudStatusDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400';
+            cloudStatusIcon.textContent = '⚠️';
+            cloudStatusText.textContent = 'قاعدة بيانات Supabase (غير متصلة)';
+            cloudStatusDot.className = 'w-2.5 h-2.5 rounded-full bg-red-400';
           }
         }
 
@@ -1518,71 +1207,34 @@
         const modalSavedCount = document.getElementById('modalSavedCount');
         const modalSyncState = document.getElementById('modalSyncState');
 
-        if (modalSavedCount) {
-          modalSavedCount.textContent = `${applications.length} طلب`;
-        }
+        if (modalSavedCount) modalSavedCount.textContent = `${applications.length} طلب`;
         if (modalBadge) {
-          if (isCloud) {
+          if (sbOnline) {
             modalBadge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1.5';
-            modalBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> متصل بقاعدة البيانات السحابية (Firebase Live)';
+            modalBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> متصل بـ Supabase';
           } else {
-            modalBadge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1.5';
-            modalBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-amber-400"></span> قاعدة بيانات محلية دائمية (IndexedDB نشط)';
+            modalBadge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-300 border border-red-500/40 flex items-center gap-1.5';
+            modalBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-red-400"></span> غير متصل بـ Supabase';
           }
         }
-        if (modalSyncState) {
-          modalSyncState.textContent = isCloud ? 'مزامنة سحابية نشطة 🟢' : 'تخزين محلي آمن 🟡';
-        }
+        if (modalSyncState) modalSyncState.textContent = sbOnline ? 'مزامنة مباشرة 🟢' : 'لا يوجد اتصال 🔴';
       }
 
       // ==================== STATE MANAGEMENT ====================
       async function loadState() {
+        updateCloudStatusUI();
         try {
-          localStorage.removeItem(OLD_STORAGE_KEY);
-          requestPersistentStorage();
-          await openIndexedDB();
-
-          const idbApps = await idbGetAll();
-          if (idbApps && idbApps.length > 0) {
-            applications = idbApps;
-            try {
-              localStorage.setItem(STORAGE_KEY, JSON.stringify(applications));
-            } catch (e) {}
-          } else {
-            const raw = localStorage.getItem(STORAGE_KEY);
-            if (raw) {
-              const parsed = JSON.parse(raw);
-              applications = Array.isArray(parsed) ? parsed : [];
-              if (applications.length > 0) {
-                idbPutAll(applications);
-              }
-            } else {
-              applications = defaultApplications.slice();
-              saveState();
-            }
-          }
+          const stats = await sbRpc('public_stats');
+          publicTotal = stats && typeof stats.total === 'number' ? stats.total : 0;
         } catch (e) {
-          applications = defaultApplications.slice();
+          console.warn('Stats load failed:', e);
         }
-
-        if (applications.length > 0 && !selectedAdminAppId) {
-          selectedAdminAppId = applications[0].id;
-        }
-
         updateCounters();
         updateCloudStatusUI();
-
-        if (getCloudDbUrl()) {
-          syncWithCloud(true).catch(() => {});
-        }
       }
 
-      function saveState() {
-        try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(applications));
-        } catch (e) {}
-        idbPutAll(applications);
-      }
+      // لم يعد هناك تخزين محلي: كل البيانات في Supabase (الدالة تُركت فارغة للتوافق)
+      function saveState() {}
 
       function getWebhookUrl() {
         try {
@@ -1733,7 +1385,7 @@
       }
 
       function updateCounters() {
-        const total = applications.length;
+        const total = isAdminAuthenticated ? applications.length : (publicTotal !== null ? publicTotal : 0);
         const statTotal = document.getElementById('statTotalApps');
         const badge1 = document.getElementById('adminBadgeCount');
         const badge2 = document.getElementById('mobileAdminBadgeCount');
@@ -1765,51 +1417,24 @@
           return;
         }
 
-        let found = applications.find(
-          a => a.id.toLowerCase() === q ||
-               a.discordTag.toLowerCase() === q ||
-               a.discordId.toLowerCase() === q
-        );
-
-        if (!found && getCloudDbUrl()) {
+        let found = null;
+        container.innerHTML = `
+          <div class="p-8 rounded-2xl bg-gray-900/50 border border-gray-800 text-center space-y-3">
+            <div class="inline-block w-8 h-8 border-2 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
+            <p class="text-sm font-bold text-amber-400">جاري البحث في قاعدة البيانات...</p>
+          </div>
+        `;
+        try {
+          found = await sbRpc('track_application', { q: (query || '').trim() });
+        } catch (e) {
+          console.warn('Track lookup error:', e);
           container.innerHTML = `
-            <div class="p-8 rounded-2xl bg-gray-900/50 border border-gray-800 text-center space-y-3">
-              <div class="inline-block w-8 h-8 border-2 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
-              <p class="text-sm font-bold text-amber-400">جاري البحث في قاعدة البيانات السحابية الحية...</p>
-              <p class="text-xs text-gray-400">يتم فحص الطلبات عبر خوادم V TEXAS RP السحابية</p>
+            <div class="p-6 rounded-2xl bg-red-950/30 border border-red-500/30 text-center space-y-2">
+              <p class="text-base font-bold text-red-300">تعذر الاتصال بقاعدة البيانات</p>
+              <p class="text-xs text-gray-400">تحقق من اتصال الإنترنت وحاول مرة أخرى.</p>
             </div>
           `;
-          try {
-            const base = normalizeCloudUrl(getCloudDbUrl());
-            const cleanUpper = q.toUpperCase();
-            let res = await fetch(`${base}/applications/${encodeURIComponent(cleanUpper)}.json`);
-            if (res.ok) {
-              const item = await res.json();
-              if (item && item.id) {
-                found = item;
-                if (!applications.some(a => a.id === found.id)) {
-                  applications.unshift(found);
-                  saveState();
-                }
-              }
-            }
-            if (!found) {
-              const cloudApps = await fetchCloudApplications();
-              if (cloudApps) {
-                found = cloudApps.find(
-                  a => a.id.toLowerCase() === q ||
-                       a.discordTag.toLowerCase() === q ||
-                       a.discordId.toLowerCase() === q
-                );
-                if (found && !applications.some(a => a.id === found.id)) {
-                  applications.unshift(found);
-                  saveState();
-                }
-              }
-            }
-          } catch (e) {
-            console.warn('Cloud track lookup error:', e);
-          }
+          return;
         }
 
         if (!found) {
@@ -2261,45 +1886,52 @@
           if (q4 === 'correct') correctCount++;
           const scorePercent = Math.round((correctCount / 4) * 100);
 
-          const randomNum = Math.floor(1100 + Math.random() * 8800);
-          const newCode = 'VTX-2026-' + randomNum;
-          lastCreatedCode = newCode;
-
           const now = new Date();
           const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
 
-          const newApp = {
-            id: newCode,
-            name: document.getElementById('appName').value.trim(),
-            age: parseInt(document.getElementById('appAge').value, 10),
-            discordTag: document.getElementById('appDiscordTag').value.trim(),
-            discordId: document.getElementById('appDiscordId').value.trim(),
-            charName: document.getElementById('appCharName').value.trim(),
-            country: document.getElementById('appCountry').value.trim(),
-            department: document.getElementById('appDepartment').value,
-            hours: document.getElementById('appHours').value,
-            shift: document.getElementById('appShift').value,
-            mic: document.getElementById('appMic').value,
-            exp: document.getElementById('appExp').value.trim(),
-            why: document.getElementById('appWhy').value.trim(),
-            scenario1: document.getElementById('appScenario1').value.trim(),
-            scenario2: document.getElementById('appScenario2').value.trim(),
-            quizScore: scorePercent,
-            quizCorrect: correctCount,
-            status: 'قيد المراجعة',
-            adminNote: 'تم استلام طلبك بنجاح وهو الآن قيد المراجعة لدى القيادة العليا. احتفظ برقم التقديم (' + newCode + ') واستعلم عنه باستمرار.',
-            createdAt: dateStr
-          };
+          const submitBtn = e.submitter || document.querySelector('#staffAppForm button[type="submit"]');
+          if (submitBtn) submitBtn.disabled = true;
 
-          applications.unshift(newApp);
-          selectedAdminAppId = newApp.id;
-          saveState();
+          let newApp;
+          try {
+            // السيرفر يولّد رقم التقديم ويحفظ الطلب في Supabase
+            newApp = await sbRpc('submit_application', {
+              p: {
+                name: document.getElementById('appName').value.trim(),
+                age: parseInt(document.getElementById('appAge').value, 10),
+                discordTag: document.getElementById('appDiscordTag').value.trim(),
+                discordId: document.getElementById('appDiscordId').value.trim(),
+                charName: document.getElementById('appCharName').value.trim(),
+                country: document.getElementById('appCountry').value.trim(),
+                department: document.getElementById('appDepartment').value,
+                hours: document.getElementById('appHours').value,
+                shift: document.getElementById('appShift').value,
+                mic: document.getElementById('appMic').value,
+                exp: document.getElementById('appExp').value.trim(),
+                why: document.getElementById('appWhy').value.trim(),
+                scenario1: document.getElementById('appScenario1').value.trim(),
+                scenario2: document.getElementById('appScenario2').value.trim(),
+                quizCorrect: correctCount,
+                createdAt: dateStr
+              }
+            });
+          } catch (err) {
+            console.error('Submit failed:', err);
+            showToast('❌ ' + sbErrorText(err), 'error');
+            if (submitBtn) submitBtn.disabled = false;
+            return;
+          }
+          if (submitBtn) submitBtn.disabled = false;
+
+          const newCode = newApp.id;
+          lastCreatedCode = newCode;
+          if (publicTotal !== null) publicTotal++;
+          if (isAdminAuthenticated) {
+            applications.unshift(newApp);
+            selectedAdminAppId = newApp.id;
+          }
           updateCounters();
 
-          // Push to Cloud DB if configured
-          if (getCloudDbUrl() && getCloudAutoSync()) {
-            pushApplicationToCloud(newApp).catch(() => {});
-          }
 
           // Optional Discord Webhook dispatch
           const webhookUrl = getWebhookUrl();
@@ -2436,11 +2068,17 @@
               updateCounters();
               renderAdminDashboard();
 
-              // Sync to Cloud DB
-              patchApplicationInCloud(target.id, {
-                status: target.status,
-                adminNote: target.adminNote,
-                updatedAt: new Date().toISOString()
+              // Sync to Supabase
+              sbRpc('admin_update_application', {
+                p_pass: adminPass,
+                p_id: target.id,
+                p_status: target.status,
+                p_note: target.adminNote || ''
+              }).then(r => {
+                if (r && r.error) throw new Error(r.error);
+              }).catch(err => {
+                console.error(err);
+                showToast('❌ فشل حفظ التحديث في Supabase. حدّث الصفحة وحاول مجدداً.', 'error');
               });
 
               showToast(`تم تحديث حالة طلب ${target.name} إلى (${newStatus}) بنجاح!`, 'info');
@@ -2461,24 +2099,29 @@
           }
         });
 
-        document.getElementById('adminAuthForm').addEventListener('submit', (e) => {
+        document.getElementById('adminAuthForm').addEventListener('submit', async (e) => {
           e.preventDefault();
           const pass = (document.getElementById('adminPasswordInput').value || '').trim();
           const errEl = document.getElementById('adminPassError');
 
-          if (ALLOWED_ADMIN_PASSWORDS.includes(pass)) {
+          let ok = false;
+          try {
+            ok = (await sbRpc('admin_login', { p_pass: pass })) === true;
+          } catch (err) {
+            showToast('❌ ' + sbErrorText(err), 'error');
+            updateCloudStatusUI();
+            return;
+          }
+
+          if (ok) {
+            adminPass = pass;
             isAdminAuthenticated = true;
             errEl.classList.add('hidden');
             document.getElementById('adminPasswordInput').value = '';
             document.getElementById('adminLockScreen').classList.add('hidden');
             document.getElementById('adminProtectedContent').classList.remove('hidden');
-            renderAdminDashboard();
-            updateCounters();
-            updateCloudStatusUI();
             showToast('مرحباً بك في لوحة القيادة العليا لسيرفر V TEXAS RP!', 'info');
-            if (getCloudDbUrl()) {
-              syncWithCloud(true);
-            }
+            await syncWithCloud(true);
           } else {
             errEl.classList.remove('hidden');
             showToast('كلمة المرور غير صحيحة، حاول مجدداً.', 'error');
@@ -2487,6 +2130,10 @@
 
         document.getElementById('lockAdminPanelBtn').addEventListener('click', () => {
           isAdminAuthenticated = false;
+          adminPass = '';
+          applications = [];
+          selectedAdminAppId = null;
+          updateCounters();
           document.getElementById('adminLockScreen').classList.remove('hidden');
           document.getElementById('adminProtectedContent').classList.add('hidden');
           showToast('تم قفل لوحة القيادة العليا بنجاح.', 'info');
@@ -2507,28 +2154,32 @@
           modal.classList.remove('flex');
         });
 
-        document.getElementById('executeClearBtn').addEventListener('click', () => {
+        document.getElementById('executeClearBtn').addEventListener('click', async () => {
           const pass = (document.getElementById('confirmClearPassInput').value || '').trim();
           const errEl = document.getElementById('confirmClearError');
-          if (!ALLOWED_ADMIN_PASSWORDS.includes(pass)) {
+
+          let r;
+          try {
+            r = await sbRpc('admin_delete_all', { p_pass: pass });
+          } catch (err) {
+            showToast('❌ ' + sbErrorText(err), 'error');
+            return;
+          }
+          if (r && r.error) {
             errEl.classList.remove('hidden');
             return;
           }
+
           applications = [];
           selectedAdminAppId = null;
-          saveState();
-          idbClear();
-          if (getCloudDbUrl()) {
-            const base = normalizeCloudUrl(getCloudDbUrl());
-            fetch(`${base}/applications.json`, { method: 'DELETE' }).catch(() => {});
-          }
+          publicTotal = 0;
           renderAdminDashboard();
           updateCounters();
           updateCloudStatusUI();
           const modal = document.getElementById('clearConfirmModal');
           modal.classList.add('hidden');
           modal.classList.remove('flex');
-          showToast('تم تصفير ومسح كافة الطلبات بنجاح.', 'info');
+          showToast('تم تصفير ومسح كافة الطلبات من Supabase بنجاح.', 'info');
         });
 
         // Webhook Modal
@@ -2554,10 +2205,8 @@
           showToast(val ? 'تم حفظ رابط الـ Webhook بنجاح!' : 'تم تعطيل ربط الـ Webhook.', 'info');
         });
 
-        // Cloud DB Modal
+        // Supabase status modal
         document.getElementById('openCloudDbModalBtn').addEventListener('click', () => {
-          document.getElementById('cloudDbUrlInput').value = getCloudDbUrl();
-          document.getElementById('cloudAutoSyncCheckbox').checked = getCloudAutoSync();
           const resultBox = document.getElementById('testConnResultBox');
           if (resultBox) resultBox.classList.add('hidden');
           updateCloudStatusUI();
@@ -2572,98 +2221,21 @@
           modal.classList.remove('flex');
         });
 
-        document.getElementById('toggleDbGuideBtn').addEventListener('click', () => {
-          const content = document.getElementById('dbGuideContent');
-          const arrow = document.getElementById('guideArrow');
-          content.classList.toggle('hidden');
-          arrow.textContent = content.classList.contains('hidden') ? '▼' : '▲';
-        });
-
         document.getElementById('testCloudDbBtn').addEventListener('click', async () => {
-          const url = document.getElementById('cloudDbUrlInput').value;
           const resultBox = document.getElementById('testConnResultBox');
-          const cleanUrl = normalizeCloudUrl(url);
-
-          if (!cleanUrl) {
-            resultBox.className = 'p-3 rounded-xl text-xs font-bold border bg-red-950/60 text-red-300 border-red-500/40 block';
-            resultBox.innerHTML = '❌ يرجى إدخال رابط قاعدة البيانات أولاً قبل فحص الاتصال.';
-            return;
-          }
-
           resultBox.className = 'p-3 rounded-xl text-xs font-bold border bg-amber-950/50 text-amber-300 border-amber-500/40 block';
-          resultBox.innerHTML = '⏳ جاري فحص الاتصال بقاعدة البيانات السحابية وقياس الاستجابة...';
-
+          resultBox.innerHTML = '⏳ جاري فحص الاتصال بـ Supabase...';
           const startTime = Date.now();
           try {
-            const res = await fetch(`${cleanUrl}/applications.json`, { method: 'GET', cache: 'no-store' });
+            await sbRpc('public_stats');
             const elapsed = Date.now() - startTime;
-            if (res.ok) {
-              resultBox.className = 'p-3 rounded-xl text-xs font-bold border bg-emerald-950/70 text-emerald-300 border-emerald-500/50 block';
-              resultBox.innerHTML = `✅ تم الاتصال بنجاح بقاعدة البيانات السحابية! (زمن الاستجابة: ${elapsed}ms). يمكنك الآن حفظ الإعدادات لتبدأ المزامنة الدائمة.`;
-            } else {
-              resultBox.className = 'p-3 rounded-xl text-xs font-bold border bg-red-950/60 text-red-300 border-red-500/40 block';
-              resultBox.innerHTML = `❌ فشل الاتصال (كود ${res.status}): تأكد من أن قواعد الحماية (Rules) في Firebase تسمح بالقراءة والكتابة (".read": true, ".write": true).`;
-            }
+            resultBox.className = 'p-3 rounded-xl text-xs font-bold border bg-emerald-950/70 text-emerald-300 border-emerald-500/50 block';
+            resultBox.innerHTML = `✅ الاتصال بـ Supabase يعمل بنجاح! (زمن الاستجابة: ${elapsed}ms)`;
           } catch (err) {
             resultBox.className = 'p-3 rounded-xl text-xs font-bold border bg-red-950/60 text-red-300 border-red-500/40 block';
-            resultBox.innerHTML = `❌ تعذر الوصول للرابط: تأكد من كتابة الرابط بشكل صحيح مع https وأن اتصال الإنترنت يعمل. (${err.message})`;
+            resultBox.innerHTML = `❌ فشل الاتصال: ${err.message}. تأكد أنك شغّلت ملف supabase_setup.sql في SQL Editor.`;
           }
-        });
-
-        document.getElementById('forceUploadLocalToCloudBtn').addEventListener('click', async () => {
-          const url = document.getElementById('cloudDbUrlInput').value;
-          const clean = normalizeCloudUrl(url);
-          if (!clean) {
-            showToast('أدخل رابط قاعدة البيانات السحابية أولاً.', 'error');
-            return;
-          }
-          if (applications.length === 0) {
-            showToast('لا توجد طلبات محلية لرفعها حالياً.', 'error');
-            return;
-          }
-          const btn = document.getElementById('forceUploadLocalToCloudBtn');
-          const originalText = btn.innerHTML;
-          btn.innerHTML = '<span>⏳</span><span>جاري الرفع...</span>';
-          try {
-            let okCount = 0;
-            for (const app of applications) {
-              const ok = await pushApplicationToCloud(app);
-              if (ok) okCount++;
-            }
-            showToast(`✅ تم رفع ${okCount} من أصل ${applications.length} طلب إلى السحابة بنجاح!`, 'info');
-          } catch (e) {
-            showToast('حدث خطأ أثناء رفع البيانات إلى السحابة.', 'error');
-          } finally {
-            btn.innerHTML = originalText;
-          }
-        });
-
-        document.getElementById('disconnectCloudDbBtn').addEventListener('click', () => {
-          setCloudDbUrl('');
-          document.getElementById('cloudDbUrlInput').value = '';
           updateCloudStatusUI();
-          showToast('تم إلغاء ربط قاعدة البيانات السحابية، والاعتماد على التخزين المحلي الدائم IndexedDB.', 'info');
-        });
-
-        document.getElementById('saveCloudDbSettingsBtn').addEventListener('click', async () => {
-          const url = document.getElementById('cloudDbUrlInput').value.trim();
-          const autoSync = document.getElementById('cloudAutoSyncCheckbox').checked;
-
-          setCloudDbUrl(url);
-          setCloudAutoSync(autoSync);
-
-          const modal = document.getElementById('cloudDbModal');
-          modal.classList.add('hidden');
-          modal.classList.remove('flex');
-
-          updateCloudStatusUI();
-
-          if (url) {
-            showToast('تم حفظ إعدادات قاعدة البيانات السحابية بنجاح! جاري المزامنة...', 'info');
-            await syncWithCloud(false);
-          } else {
-            showToast('تم حفظ الإعدادات والاعتماد على التخزين المحلي الدائم.', 'info');
-          }
         });
 
         document.getElementById('syncCloudDbBtn').addEventListener('click', () => {
@@ -2707,30 +2279,29 @@
           modal.classList.remove('flex');
         });
 
-        document.getElementById('executeImportBtn').addEventListener('click', () => {
+        document.getElementById('executeImportBtn').addEventListener('click', async () => {
           if (!pendingImportData) return;
-          const map = new Map();
-          applications.forEach(a => { if (a && a.id) map.set(a.id, a); });
-          pendingImportData.forEach(a => { if (a && a.id) map.set(a.id, a); });
-          applications = Array.from(map.values());
-          applications.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+          const items = pendingImportData;
 
-          saveState();
-          updateCounters();
-          renderAdminDashboard();
-          updateCloudStatusUI();
+          let r;
+          try {
+            r = await sbRpc('admin_import_applications', { p_pass: adminPass, p_items: items });
+          } catch (err) {
+            showToast('❌ فشل الاستيراد: ' + sbErrorText(err), 'error');
+            return;
+          }
+          if (r && r.error) {
+            showToast('❌ فشل الاستيراد: غير مصرح.', 'error');
+            return;
+          }
 
-          const count = pendingImportData.length;
           pendingImportData = null;
           const modal = document.getElementById('importConfirmModal');
           modal.classList.add('hidden');
           modal.classList.remove('flex');
 
-          showToast(`✅ تم استيراد ودمج ${count} طلب بنجاح في قاعدة البيانات!`, 'info');
-
-          if (getCloudDbUrl()) {
-            syncWithCloud(true);
-          }
+          showToast(`✅ تم استيراد ودمج ${r && r.imported != null ? r.imported : items.length} طلب بنجاح في Supabase!`, 'info');
+          await syncWithCloud(true);
         });
       }
 
