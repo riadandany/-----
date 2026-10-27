@@ -1,0 +1,2758 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷 | بوابة التقديم على الإدارة</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Cairo', 'Inter', 'sans-serif'],
+            display: ['Cairo', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            texas: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              900: '#78350f',
+            },
+            obsidian: {
+              800: '#111827',
+              900: '#0b0f19',
+              950: '#060911',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Cairo', 'Inter', sans-serif;
+      background-color: #060911;
+      color: #f3f4f6;
+      overflow-x: hidden;
+    }
+    .glass-card {
+      background: rgba(17, 24, 39, 0.78);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(245, 158, 11, 0.18);
+    }
+    .glass-card-subtle {
+      background: rgba(17, 24, 39, 0.55);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fde68a 0%, #f59e0b 50%, #ea580c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-btn {
+      background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+      transition: all 0.25s ease;
+    }
+    .gold-btn:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.4);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0b0f19;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #374151;
+      border-radius: 3px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #f59e0b;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.25); }
+      50% { box-shadow: 0 0 28px rgba(234, 88, 12, 0.45); }
+    }
+    .glow-badge {
+      animation: pulseGlow 3s infinite;
+    }
+  
+    .discord-btn {
+      background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
+      transition: all 0.25s ease;
+    }
+    .discord-btn:hover {
+      filter: brightness(1.15);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px -5px rgba(88, 101, 242, 0.45);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-amber-500 selection:text-black custom-scrollbar">
+  <!-- Top Discord Announcement Bar -->
+  <div class="bg-gradient-to-r from-indigo-950 via-[#101528] to-indigo-950 border-b border-indigo-500/30 py-2 px-4 text-xs relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-right">
+      <div class="flex items-center gap-2 text-gray-200">
+        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-indigo-500/25 text-indigo-300">
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+        </span>
+        <span>سيرفر الديسكورد الرسمي لمجتمع <strong>𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷</strong>: التواجد إلزامي لمتابعة القبول والمقابلات!</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="https://discord.gg/2na3tTWpt" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1 rounded-lg discord-btn text-white font-bold transition flex items-center gap-1.5 shadow">
+          <span>انضم للديسكورد الآن ↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="fixed bottom-5 left-5 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none px-4 sm:px-0"></div>
+
+  <!-- Top Navbar -->
+  <header class="sticky top-0 z-40 glass-card border-b border-amber-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
+      <!-- Brand -->
+      <div class="flex items-center gap-3 cursor-pointer" id="brandHomeBtn">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg shadow-amber-500/25 border border-amber-300/30 shrink-0">
+          <span class="text-xl font-black tracking-tighter text-black">VTX</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-lg sm:text-xl font-black tracking-wide gold-gradient-text">𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷</span>
+            <span class="hidden sm:inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+              التقديم مفتوح
+            </span>
+          </div>
+          <p class="text-xs text-gray-400">بوابة التقديم الرسمية على طاقم الإدارة</p>
+        </div>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1.5 bg-gray-900/80 p-1.5 rounded-xl border border-gray-800">
+        <button data-nav="home" class="nav-tab px-4 py-2 rounded-lg text-sm font-bold transition-all bg-amber-500 text-black shadow">
+          الرئيسية والشروط
+        </button>
+        <button data-nav="apply" class="nav-tab px-4 py-2 rounded-lg text-sm font-bold transition-all text-gray-300 hover:text-white hover:bg-gray-800/60">
+          تقديم طلب جديد
+        </button>
+        <button data-nav="track" class="nav-tab px-4 py-2 rounded-lg text-sm font-bold transition-all text-gray-300 hover:text-white hover:bg-gray-800/60">
+          متابعة حالة الطلب
+        </button>
+        <button data-nav="admin" class="nav-tab px-4 py-2 rounded-lg text-sm font-bold transition-all text-gray-300 hover:text-white hover:bg-gray-800/60 flex items-center gap-1.5">
+          <span>لوحة القيادة</span>
+          <span id="adminBadgeCount" class="px-1.5 py-0.2 text-[11px] rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">4</span>
+        </button>
+      </nav>
+
+      <!-- Quick CTA & Mobile Menu Toggle -->
+      <div class="flex items-center gap-2">
+        
+        <!-- Nav Discord Button -->
+        <a href="https://discord.gg/2na3tTWpt" target="_blank" rel="noopener noreferrer" class="discord-btn text-white font-bold text-xs sm:text-sm px-3.5 py-2.5 rounded-xl shadow-md flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+          <span class="hidden sm:inline">سيرفر الديسكورد</span>
+          <span class="sm:hidden">الديسكورد</span>
+        </a>
+        <button id="headerApplyBtn" class="hidden sm:inline-flex items-center gap-2 gold-btn text-black font-extrabold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md">
+          <span>قدّم الآن</span>
+          <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </button>
+        <button id="mobileMenuBtn" class="md:hidden p-2.5 rounded-xl bg-gray-800/80 text-gray-200 hover:text-amber-400 border border-gray-700" aria-label="القائمة">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenuDrawer" class="hidden md:hidden border-t border-gray-800 bg-gray-950/95 px-4 py-3 space-y-1.5">
+
+      <!-- Mobile Discord Drawer Item -->
+      <a href="https://discord.gg/2na3tTWpt" target="_blank" rel="noopener noreferrer" class="discord-btn w-full text-center px-4 py-3 rounded-lg text-sm font-bold text-white flex items-center justify-center gap-2 shadow-md">
+        <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+        <span>انضم إلى سيرفر الديسكورد الرسمي (discord.gg/2na3tTWpt)</span>
+      </a>
+      <button data-nav="home" class="nav-tab w-full text-right px-4 py-2.5 rounded-lg text-sm font-bold transition-all bg-amber-500 text-black">
+        الرئيسية والشروط
+      </button>
+      <button data-nav="apply" class="nav-tab w-full text-right px-4 py-2.5 rounded-lg text-sm font-bold transition-all text-gray-300 hover:bg-gray-800">
+        تقديم طلب جديد
+      </button>
+      <button data-nav="track" class="nav-tab w-full text-right px-4 py-2.5 rounded-lg text-sm font-bold transition-all text-gray-300 hover:bg-gray-800">
+        متابعة حالة الطلب
+      </button>
+      <button data-nav="admin" class="nav-tab w-full text-right px-4 py-2.5 rounded-lg text-sm font-bold transition-all text-gray-300 hover:bg-gray-800 flex items-center justify-between">
+        <span>لوحة القيادة العليا (مراجعة الطلبات)</span>
+        <span id="mobileAdminBadgeCount" class="px-2 py-0.5 text-xs rounded-full bg-amber-500/20 text-amber-300">4</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+
+    <!-- ==================== VIEW 1: HOME & REQUIREMENTS ==================== -->
+    <section id="view-home" class="space-y-10">
+      <!-- Hero Banner -->
+      <div class="relative rounded-3xl overflow-hidden border border-amber-500/30 shadow-2xl">
+        <img src="data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23060911"/><stop offset="50%" stop-color="%231a120b"/><stop offset="100%" stop-color="%23451a03"/></linearGradient><radialGradient id="glow" cx="75%" cy="35%" r="50%"><stop offset="0%" stop-color="%23f59e0b" stop-opacity="0.35"/><stop offset="100%" stop-color="%23000000" stop-opacity="0"/></radialGradient></defs><rect width="1600" height="600" fill="url(%23bg)"/><circle cx="1200" cy="220" r="450" fill="url(%23glow)"/><text x="120" y="270" font-family="Arial,sans-serif" font-weight="900" font-size="78" fill="%23f59e0b" letter-spacing="2">V TEXAS RP</text><text x="120" y="340" font-family="Arial,sans-serif" font-weight="700" font-size="34" fill="%23ffffff">OFFICIAL RECRUITMENT PORTAL 2026</text><text x="120" y="400" font-family="Arial,sans-serif" font-weight="500" font-size="22" fill="%239ca3af">انضم الآن إلى نخبة طاقم إدارة أضخم سيرفر فايف إم عربي</text></svg>" alt="V TEXAS RP Skyline" class="w-full h-[360px] sm:h-[440px] object-cover object-center" />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#060911] via-[#060911]/80 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#060911]/90 via-[#060911]/55 to-transparent"></div>
+
+        <div class="absolute inset-0 flex flex-col justify-end p-6 sm:p-10 lg:p-12">
+          <div class="max-w-2xl space-y-4">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-bold glow-badge">
+              <span>🤠</span>
+              <span>الموسم الجديد • دفعة الإدارة لعام 2026</span>
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-black text-white leading-tight">
+              انضم إلى نخبة إدارة <span class="gold-gradient-text">𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷</span>
+            </h1>
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+              نبحث عن إداريين محترفين، عادلين، وذوي خبرة عالية في قوانين الـ Roleplay للمساهمة في بناء أفضل بيئة لعب واقعية وممتعة في مجتمع تكساس.
+            </p>
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <button id="heroStartApplyBtn" class="gold-btn text-black font-black px-6 py-3.5 rounded-xl text-sm sm:text-base flex items-center gap-2 shadow-lg">
+                <span>ابدأ التقديم الآن</span>
+                <svg class="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+              </button>
+              <button id="heroTrackBtn" class="px-5 py-3.5 rounded-xl bg-gray-900/90 hover:bg-gray-800 text-white font-bold text-sm sm:text-base border border-gray-700 transition">
+                الاستعلام عن طلب سابق
+              </button>
+
+              <!-- Hero Discord CTA -->
+              <a href="https://discord.gg/2na3tTWpt" target="_blank" rel="noopener noreferrer" class="discord-btn text-white font-black px-5 py-3.5 rounded-xl text-sm sm:text-base flex items-center gap-2.5 shadow-lg border border-indigo-400/40">
+                <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+                <span>دخول سيرفر الديسكورد الرسمي</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Stats Bar -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl shrink-0">🛡️</div>
+          <div>
+            <p class="text-xs text-gray-400">الشواغر الإدارية المتاحة</p>
+            <p class="text-xl sm:text-2xl font-black text-white">18 مقعداً</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl shrink-0">⚡</div>
+          <div>
+            <p class="text-xs text-gray-400">متوسط سرعة الرد</p>
+            <p class="text-xl sm:text-2xl font-black text-white">أقل من 24 ساعة</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl shrink-0">📋</div>
+          <div>
+            <p class="text-xs text-gray-400">إجمالي الطلبات المستلمة</p>
+            <p id="statTotalApps" class="text-xl sm:text-2xl font-black text-white">4 طلبات</p>
+          </div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400 text-2xl shrink-0">🎙️</div>
+          <div>
+            <p class="text-xs text-gray-400">مرحلة القبول النهائية</p>
+            <p class="text-xl sm:text-2xl font-black text-white">مقابلة ديسكورد</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Available Departments -->
+      <div class="space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+          <div>
+            <h2 class="text-2xl font-black text-white">الأقسام الإدارية المتاحة للتقديم</h2>
+            <p class="text-sm text-gray-400">اختر القسم الأنسب لخبرتك ومهاراتك واضغط عليه للبدء بالتقديم المباشر</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Dept 1 -->
+          <div class="glass-card rounded-2xl p-5 flex flex-col justify-between hover:border-amber-500/60 transition group">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-2xl">⚖️</span>
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">متاح (6 مقاعد)</span>
+              </div>
+              <h3 class="text-lg font-extrabold text-white group-hover:text-amber-400 transition">إدارة السيرفر والرقابة (Moderation)</h3>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                مراقبة السيرفر الميدانية، التعامل مع بلاغات اللاعبين داخل اللعبة، وضبط المخالفات الفورية مثل RDM و VDM.
+              </p>
+            </div>
+            <button data-select-dept="إدارة السيرفر والرقابة (Moderation)" class="dept-apply-btn mt-5 w-full py-2.5 rounded-xl bg-amber-500/15 hover:bg-amber-500 hover:text-black text-amber-300 font-bold text-xs border border-amber-500/30 transition">
+              التقديم على هذا القسم
+            </button>
+          </div>
+
+          <!-- Dept 2 -->
+          <div class="glass-card rounded-2xl p-5 flex flex-col justify-between hover:border-amber-500/60 transition group">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-2xl">🎧</span>
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">متاح (5 مقاعد)</span>
+              </div>
+              <h3 class="text-lg font-extrabold text-white group-hover:text-amber-400 transition">الدعم الفني والتذاكر (Support)</h3>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                استقبال اللاعبين في رومات الانتظار، حل المشاكل التقنية، والرد على تذاكر الديسكورد والشكاوى باحترافية.
+              </p>
+            </div>
+            <button data-select-dept="الدعم الفني والتذاكر (Support)" class="dept-apply-btn mt-5 w-full py-2.5 rounded-xl bg-amber-500/15 hover:bg-amber-500 hover:text-black text-amber-300 font-bold text-xs border border-amber-500/30 transition">
+              التقديم على هذا القسم
+            </button>
+          </div>
+
+          <!-- Dept 3 -->
+          <div class="glass-card rounded-2xl p-5 flex flex-col justify-between hover:border-amber-500/60 transition group">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-2xl">🎭</span>
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-400 border border-amber-500/30">متاح (4 مقاعد)</span>
+              </div>
+              <h3 class="text-lg font-extrabold text-white group-hover:text-amber-400 transition">الرقابة على السيناريوهات (RP Team)</h3>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                متابعة جودة التمثيل والسيناريوهات الكبرى للشرطة والعصابات والمدنيين وتقييم التزام الأطراف بالواقعية.
+              </p>
+            </div>
+            <button data-select-dept="الرقابة على السيناريوهات (RP Team)" class="dept-apply-btn mt-5 w-full py-2.5 rounded-xl bg-amber-500/15 hover:bg-amber-500 hover:text-black text-amber-300 font-bold text-xs border border-amber-500/30 transition">
+              التقديم على هذا القسم
+            </button>
+          </div>
+
+          <!-- Dept 4 -->
+          <div class="glass-card rounded-2xl p-5 flex flex-col justify-between hover:border-amber-500/60 transition group">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-2xl">🏆</span>
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-400 border border-amber-500/30">متاح (3 مقاعد)</span>
+              </div>
+              <h3 class="text-lg font-extrabold text-white group-hover:text-amber-400 transition">تنظيم الفعاليات والإعلام (Events)</h3>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                ابتكار وتنظيم الفعاليات الأسبوعية، البطولات، وصناعة المحتوى المرئي لإثراء تجربة اللاعبين في تكساس.
+              </p>
+            </div>
+            <button data-select-dept="تنظيم الفعاليات والإعلام (Events)" class="dept-apply-btn mt-5 w-full py-2.5 rounded-xl bg-amber-500/15 hover:bg-amber-500 hover:text-black text-amber-300 font-bold text-xs border border-amber-500/30 transition">
+              التقديم على هذا القسم
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- Dedicated Discord Card in Home -->
+      <div class="glass-card rounded-3xl p-6 sm:p-8 border border-indigo-500/40 relative overflow-hidden shadow-2xl">
+        <div class="absolute -top-12 -left-12 w-48 h-48 bg-indigo-600/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 relative z-10">
+          <div class="space-y-2 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-bold border border-indigo-500/30">
+              <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+              <span>سيرفر الديسكورد الرسمي لمجتمع V TEXAS RP</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-black text-white">
+              انضم إلى مجتمع وسيرفر <span class="text-indigo-400">ديسكورد تكساس رول بلاي</span>
+            </h3>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+              جميع مراحل القبول والمقابلات الصوتية والتواصل مع القيادة العليا تتم حصرياً داخل سيرفر الديسكورد الرسمي. بعد تقديم طلبك وظهور نتيجة قبولك، توجّه إلى السيرفر وافتح تذكرة إدارة (Ticket) وأرسل رقم تقديمك للمباشرة فوراً.
+            </p>
+            <div class="flex items-center gap-2 pt-1 text-xs text-gray-400 font-mono">
+              <span>الرابط الرسمي:</span>
+              <a href="https://discord.gg/2na3tTWpt" target="_blank" rel="noopener noreferrer" class="text-indigo-300 font-bold bg-indigo-950/70 px-3 py-1 rounded-lg border border-indigo-800/60 hover:text-white transition">
+                https://discord.gg/2na3tTWpt
+              </a>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row lg:flex-col gap-3 w-full sm:w-auto shrink-0">
+            <a href="https://discord.gg/2na3tTWpt" target="_blank" rel="noopener noreferrer" class="discord-btn text-white font-black px-6 py-3.5 rounded-xl text-sm flex items-center justify-center gap-2.5 shadow-xl text-center">
+              <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+              <span>انضم إلى سيرفر الديسكورد ↗</span>
+            </a>
+            <button type="button" onclick="navigator.clipboard.writeText('https://discord.gg/2na3tTWpt'); alert('تم نسخ رابط الديسكورد بنجاح: https://discord.gg/2na3tTWpt');" class="px-4 py-2.5 rounded-xl bg-gray-900/90 hover:bg-gray-800 text-gray-200 border border-gray-700 text-xs font-bold transition flex items-center justify-center gap-2">
+              <span>📋 نسخ رابط الديسكورد</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Requirements & Rules Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Mandatory Requirements -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-center gap-2.5">
+            <span class="w-9 h-9 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">✓</span>
+            <h3 class="text-xl font-black text-white">الشروط الأساسية للقبول في إدارة 𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li class="flex items-start gap-3 bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+              <span class="text-amber-400 font-black mt-0.5">01.</span>
+              <span>أن لا يقل عمر المتقدم عن <strong>16 عاماً</strong> مع التمتع بالنضج الكافي وحسن التعامل واللباقة.</span>
+            </li>
+            <li class="flex items-start gap-3 bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+              <span class="text-amber-400 font-black mt-0.5">02.</span>
+              <span>الإلمام التام بجميع قوانين الـ <strong>Roleplay</strong> العامة والخاصة بسيرفر تكساس وعدم وجود سجل حظر سابق.</span>
+            </li>
+            <li class="flex items-start gap-3 bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+              <span class="text-amber-400 font-black mt-0.5">03.</span>
+              <span>امتلاك <strong>مايكروفون واضح</strong> والقدرة على التواجد الصوتي والتفاعل اليومي بما لا يقل عن 3 إلى 4 ساعات.</span>
+            </li>
+            <li class="flex items-start gap-3 bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+              <span class="text-amber-400 font-black mt-0.5">04.</span>
+              <span>الحيادية التامة وعدم التحيز للأصدقاء أو العصابات أو القطاعات العسكرية أثناء تأدية المهام الإدارية.</span>
+            </li>
+            <li class="flex items-start gap-3 bg-gray-900/60 p-3 rounded-xl border border-gray-800">
+              <span class="text-amber-400 font-black mt-0.5">05.</span>
+              <span>يُمنع منعاً باتاً إرسال رسائل خاصة للإدارة العليا لاستعجال قبول الطلب (الاستعجال يؤدي للرفض التلقائي).</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- RP Quick Glossary / Prep Guide -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <span class="w-9 h-9 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center font-bold">📘</span>
+              <h3 class="text-xl font-black text-white">دليل مصطلحات الـ RP السريع (للمراجعة قبل التقديم)</h3>
+            </div>
+          </div>
+          <div class="space-y-2.5 text-sm">
+            <div class="p-3.5 rounded-xl bg-gray-900/60 border border-gray-800">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-extrabold text-amber-400">RDM & VDM</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-red-500/15 text-red-300">مخالفة جسيمة</span>
+              </div>
+              <p class="text-xs text-gray-300"><strong>RDM:</strong> القتل العشوائي بدون سبب أو سيناريو مسبق. <strong>VDM:</strong> استخدام المركبة كسلاح لدهس اللاعبين عمداً.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-gray-900/60 border border-gray-800">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-extrabold text-amber-400">Metagaming (الميتا قيمنق)</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-amber-500/15 text-amber-300">مخالفة معلومات</span>
+              </div>
+              <p class="text-xs text-gray-300">استخدام معلومات من خارج اللعبة (مثل البثوث أو الديسكورد) والاستفادة منها داخل مجريات اللعب.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-gray-900/60 border border-gray-800">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-extrabold text-amber-400">Powergaming (الباور قيمنق)</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-amber-500/15 text-amber-300">مخالفة واقعية</span>
+              </div>
+              <p class="text-xs text-gray-300">فعل أشياء خارقة وغير منطقية في الواقع، أو إجبار اللاعب الآخر على سيناريو واحد دون إعطائه فرصة للرد.</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-gray-900/60 border border-gray-800">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-extrabold text-amber-400">Fear RP & Combat Logging</span>
+                <span class="text-[11px] px-2 py-0.5 rounded bg-red-500/15 text-red-300">مخالفة سيناريو</span>
+              </div>
+              <p class="text-xs text-gray-300"><strong>Fear RP:</strong> وجوب التمثيل بالخوف على حياتك عند تهديدك بالسلاح. <strong>Combat Logging:</strong> الخروج من السيرفر للهروب من سيناريو قائم.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 2: APPLICATION FORM ==================== -->
+    <section id="view-apply" class="hidden max-w-4xl mx-auto space-y-6">
+      <!-- Form Header & Stepper -->
+      <div class="glass-card rounded-2xl p-6 space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-gray-800 pb-4">
+          <div>
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">نموذج التوظيف الرسمي</span>
+            <h2 class="text-2xl font-black text-white mt-0.5">استمارة التقديم على إدارة 𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷</h2>
+          </div>
+          <button id="fillSampleDataBtn" type="button" class="self-start sm:self-auto text-xs font-bold px-3.5 py-2 rounded-xl bg-gray-800 hover:bg-gray-700 text-amber-300 border border-amber-500/30 transition">
+            ✨ تعبئة نموذج تجريبي سريع
+          </button>
+        </div>
+
+        <!-- Step Indicators -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-4">
+          <button type="button" data-step-btn="1" class="step-indicator flex items-center gap-2.5 p-3 rounded-xl border border-amber-500 bg-amber-500/15 text-right transition">
+            <span class="w-7 h-7 rounded-lg bg-amber-500 text-black font-black text-xs flex items-center justify-center shrink-0">1</span>
+            <div class="overflow-hidden">
+              <p class="text-xs font-black text-white truncate">البيانات الشخصية</p>
+              <p class="text-[11px] text-amber-300 truncate hidden sm:block">معلوماتك وحساب الديسكورد</p>
+            </div>
+          </button>
+          <button type="button" data-step-btn="2" class="step-indicator flex items-center gap-2.5 p-3 rounded-xl border border-gray-800 bg-gray-900/60 text-right transition">
+            <span class="w-7 h-7 rounded-lg bg-gray-800 text-gray-400 font-black text-xs flex items-center justify-center shrink-0">2</span>
+            <div class="overflow-hidden">
+              <p class="text-xs font-bold text-gray-300 truncate">الخبرة والمواقف</p>
+              <p class="text-[11px] text-gray-500 truncate hidden sm:block">خبراتك السابقة وأسئلة الإدارة</p>
+            </div>
+          </button>
+          <button type="button" data-step-btn="3" class="step-indicator flex items-center gap-2.5 p-3 rounded-xl border border-gray-800 bg-gray-900/60 text-right transition">
+            <span class="w-7 h-7 rounded-lg bg-gray-800 text-gray-400 font-black text-xs flex items-center justify-center shrink-0">3</span>
+            <div class="overflow-hidden">
+              <p class="text-xs font-bold text-gray-300 truncate">اختبار القوانين والإرسال</p>
+              <p class="text-[11px] text-gray-500 truncate hidden sm:block">اختبار RP السريع والتأكيد</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Multi-Step Form -->
+      <form id="staffAppForm" class="space-y-6" novalidate>
+        <!-- STEP 1: Personal & Account Info -->
+        <div id="form-step-1" class="glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+          <div class="border-b border-gray-800 pb-3">
+            <h3 class="text-lg font-black text-amber-400">القسم الأول: البيانات الشخصية ومعلومات الحسابات</h3>
+            <p class="text-xs text-gray-400">يرجى التأكد من صحة معرف الديسكورد حتى نتمكن من التواصل معك عند القبول.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">الاسم الحقيقي (أو الكنية) <span class="text-red-400">*</span></label>
+              <input id="appName" type="text" required placeholder="مثال: عبد الله العتيبي" class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-white placeholder-gray-500" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">العمر (بالسنوات) <span class="text-red-400">*</span></label>
+              <input id="appAge" type="number" min="14" max="60" required placeholder="مثال: 19" class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-white placeholder-gray-500" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">اسم مستخدم الديسكورد (Discord Username) <span class="text-red-400">*</span></label>
+              <input id="appDiscordTag" type="text" required placeholder="مثال: texas_king" dir="ltr" class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-white placeholder-gray-500 text-right" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">معرف الديسكورد الرقمي (Discord ID) <span class="text-red-400">*</span></label>
+              <input id="appDiscordId" type="text" required placeholder="مثال: 849201938472619201" dir="ltr" class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-white placeholder-gray-500 text-right" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">اسمك داخل السيرفر (Character Name) <span class="text-red-400">*</span></label>
+              <input id="appCharName" type="text" required placeholder="مثال: راكان آل سعود / Rakan" class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-white placeholder-gray-500" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">البلد / التوقيت الزمني <span class="text-red-400">*</span></label>
+              <input id="appCountry" type="text" required placeholder="مثال: السعودية / مصر / الإمارات (GMT+3)" class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-white placeholder-gray-500" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">القسم الإداري المطلوب <span class="text-red-400">*</span></label>
+              <select id="appDepartment" required class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-white">
+                <option value="إدارة السيرفر والرقابة (Moderation)">إدارة السيرفر والرقابة (Moderation)</option>
+                <option value="الدعم الفني والتذاكر (Support)">الدعم الفني والتذاكر (Support)</option>
+                <option value="الرقابة على السيناريوهات (RP Team)">الرقابة على السيناريوهات (RP Team)</option>
+                <option value="تنظيم الفعاليات والإعلام (Events)">تنظيم الفعاليات والإعلام (Events)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">معدل التواجد اليومي (ساعات) <span class="text-red-400">*</span></label>
+              <select id="appHours" required class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-white">
+                <option value="3 - 4 ساعات يومياً">3 - 4 ساعات يومياً</option>
+                <option value="5 - 6 ساعات يومياً">5 - 6 ساعات يومياً</option>
+                <option value="7 - 9 ساعات يومياً">7 - 9 ساعات يومياً</option>
+                <option value="أكثر من 9 ساعات يومياً">أكثر من 9 ساعات يومياً</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">الفترة المفضلة للتواجد</label>
+              <select id="appShift" class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-white">
+                <option value="الفترة المسائية والليلية (4 م - 2 ص)">الفترة المسائية والليلية (4 م - 2 ص)</option>
+                <option value="فترة الفجر والصباح (2 ص - 12 م)">فترة الفجر والصباح (2 ص - 12 م)</option>
+                <option value="أوقات مرنة طوال اليوم">أوقات مرنة طوال اليوم</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">جودة المايكروفون والقدرة على التصوير (Clip)</label>
+              <select id="appMic" class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-white">
+                <option value="مايكروفون ممتاز + أستطيع تصوير الشاشة (Medal/OBS)">مايكروفون ممتاز + أستطيع تصوير الشاشة (Medal/OBS)</option>
+                <option value="مايكروفون ممتاز فقط">مايكروفون ممتاز فقط</option>
+                <option value="مايكروفون متوسط">مايكروفون متوسط</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="flex justify-end pt-4 border-t border-gray-800">
+            <button type="button" id="toStep2Btn" class="gold-btn text-black font-black px-6 py-3 rounded-xl text-sm flex items-center gap-2">
+              <span>التالي: الخبرة والمواقف</span>
+              <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Experience & Scenarios -->
+        <div id="form-step-2" class="hidden glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+          <div class="border-b border-gray-800 pb-3">
+            <h3 class="text-lg font-black text-amber-400">القسم الثاني: الخبرات السابقة والمواقف الإدارية</h3>
+            <p class="text-xs text-gray-400">اكتب إجاباتك بأسلوبك الخاص وبوضوح؛ الإجابات المفصلة تزيد من فرصة قبولك.</p>
+          </div>
+
+          <div class="space-y-5">
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">هل سبق لك العمل كإداري في سيرفرات RP؟ اذكر أسماء السيرفرات ورتبتك فيها <span class="text-red-400">*</span></label>
+              <textarea id="appExp" rows="3" required placeholder="مثال: نعم، كنت مشرف عام (Senior Admin) في سيرفر ... لمدة 6 أشهر، ومسؤول تذاكر في سيرفر ..." class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none p-4 text-sm text-white placeholder-gray-500"></textarea>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">لماذا ترغب بالانضمام إلى إدارة 𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷 تحديداً؟ وما الذي يميزك عن غيرك؟ <span class="text-red-400">*</span></label>
+              <textarea id="appWhy" rows="3" required placeholder="اشرح دوافعك ومهاراتك في التعامل مع اللاعبين..." class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none p-4 text-sm text-white placeholder-gray-500"></textarea>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">موقف إداري (1): لو دخلت لسحب لاعب مخالف واكتشفت أنه صديقك المقرب في السيرفر، كيف تتصرف؟ <span class="text-red-400">*</span></label>
+              <textarea id="appScenario1" rows="3" required placeholder="اكتب الإجراء الإداري الصحيح الذي ستتخذه..." class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none p-4 text-sm text-white placeholder-gray-500"></textarea>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-300 mb-2">موقف إداري (2): لو استلمت تذكرة دعم فني وكان اللاعب غاضباً جداً ويرفع صوته بسبب خسارة أغراضه في سيناريو، كيف تحتوي الموقف؟ <span class="text-red-400">*</span></label>
+              <textarea id="appScenario2" rows="3" required placeholder="اشرح خطواتك لتهدئة اللاعب والتحقق من الأدلة..." class="w-full rounded-xl bg-gray-900/90 border border-gray-700 focus:border-amber-500 focus:outline-none p-4 text-sm text-white placeholder-gray-500"></textarea>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-gray-800">
+            <button type="button" id="backToStep1Btn" class="px-5 py-3 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 font-bold text-sm">
+              السابق
+            </button>
+            <button type="button" id="toStep3Btn" class="gold-btn text-black font-black px-6 py-3 rounded-xl text-sm flex items-center gap-2">
+              <span>التالي: اختبار القوانين</span>
+              <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: RP Rules Quiz & Submit -->
+        <div id="form-step-3" class="hidden glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+          <div class="border-b border-gray-800 pb-3">
+            <h3 class="text-lg font-black text-amber-400">القسم الثالث: اختبار إتقان قوانين الـ Roleplay والتعهد</h3>
+            <p class="text-xs text-gray-400">أجب عن الأسئلة الـ 4 التالية بدقة؛ يتم إرفاق درجتك تلقائياً في ملف تقديمك لدى القيادة العليا.</p>
+          </div>
+
+          <div class="space-y-5">
+            <!-- Q1 -->
+            <div class="p-4 rounded-xl bg-gray-900/70 border border-gray-800 space-y-2.5">
+              <p class="text-sm font-bold text-white">1. لاعب شاهد بث مباشر (Stream) للاعب آخر وعرف مكان مخبأ عصابته السري وذهب لمداهمته داخل اللعبة. ماذا تُسمى هذه المخالفة؟</p>
+              <select id="quizQ1" class="w-full rounded-xl bg-gray-950 border border-gray-700 focus:border-amber-500 px-4 py-2.5 text-sm text-white">
+                <option value="">-- اختر الإجابة الصحيحة --</option>
+                <option value="correct">Metagaming (ميتا قيمنق)</option>
+                <option value="wrong1">Powergaming (باور قيمنق)</option>
+                <option value="wrong2">VDM (دهس عشوائي)</option>
+                <option value="wrong3">New Life Rule (قانون الحياة الجديدة)</option>
+              </select>
+            </div>
+
+            <!-- Q2 -->
+            <div class="p-4 rounded-xl bg-gray-900/70 border border-gray-800 space-y-2.5">
+              <p class="text-sm font-bold text-white">2. لاعب تم توجيه 3 أسلحة نارية مباشرة نحو رأسه من قِبل خاطفين، فقام بإخراج سلاحه فوراً والاشتباك معهم دون الاكتراث لحياته. ما المخالفة هنا؟</p>
+              <select id="quizQ2" class="w-full rounded-xl bg-gray-950 border border-gray-700 focus:border-amber-500 px-4 py-2.5 text-sm text-white">
+                <option value="">-- اختر الإجابة الصحيحة --</option>
+                <option value="wrong1">RDM (قتل عشوائي)</option>
+                <option value="correct">كسر قانون الخوف على الحياة (Fear RP / NVL)</option>
+                <option value="wrong2">Combat Logging (فصل من السيرفر)</option>
+                <option value="wrong3">تصرف سليم ولا توجد مخالفة</option>
+              </select>
+            </div>
+
+            <!-- Q3 -->
+            <div class="p-4 rounded-xl bg-gray-900/70 border border-gray-800 space-y-2.5">
+              <p class="text-sm font-bold text-white">3. أثناء مطاردة مع الشرطة، انقلبت سيارة الهارب عدة مرات من فوق جبل مرتفع ثم أكمل القيادة فوراً وكأن شيئاً لم يحدث. ماذا يُعد هذا التصرف؟</p>
+              <select id="quizQ3" class="w-full rounded-xl bg-gray-950 border border-gray-700 focus:border-amber-500 px-4 py-2.5 text-sm text-white">
+                <option value="">-- اختر الإجابة الصحيحة --</option>
+                <option value="correct">Powergaming / عدم تمثيل الحادث (Non-RP Driving)</option>
+                <option value="wrong1">Metagaming (ميتا قيمنق)</option>
+                <option value="wrong2">Stream Sniping</option>
+                <option value="wrong3">مسموح به في المطاردات</option>
+              </select>
+            </div>
+
+            <!-- Q4 -->
+            <div class="p-4 rounded-xl bg-gray-900/70 border border-gray-800 space-y-2.5">
+              <p class="text-sm font-bold text-white">4. ما الإجراء الإداري السليم قبل إصدار عقوبة حظر (Ban) على لاعب متهم بمخالفة لم تشهدها بنفسك؟</p>
+              <select id="quizQ4" class="w-full rounded-xl bg-gray-950 border border-gray-700 focus:border-amber-500 px-4 py-2.5 text-sm text-white">
+                <option value="">-- اختر الإجابة الصحيحة --</option>
+                <option value="wrong1">حظره فوراً بناءً على كلام المشتكي</option>
+                <option value="correct">طلب مقطع فيديو واضح (Clip) بالصوت والصورة وسماع الطرفين قبل الحكم</option>
+                <option value="wrong2">سحب أسلحة المتهم دون سؤاله</option>
+                <option value="wrong3">إغلاق التذكرة دون رد</option>
+              </select>
+            </div>
+
+            <!-- Pledge Checkbox -->
+            <label class="flex items-start gap-3 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 cursor-pointer">
+              <input id="appPledge" type="checkbox" class="mt-1 w-4 h-4 accent-amber-500 rounded" />
+              <span class="text-xs sm:text-sm text-gray-200 leading-relaxed">
+                أتعهد بأن جميع البيانات المدخلة صحيحة، وأوافق على الالتزام التام بقوانين الإدارة وسرية معلومات سيرفر <strong>𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷</strong> وعدم استغلال الصلاحيات الإدارية لمصالح شخصية.
+              </span>
+            </label>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-gray-800">
+            <button type="button" id="backToStep2Btn" class="px-5 py-3 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 font-bold text-sm">
+              السابق
+            </button>
+            <button type="submit" class="gold-btn text-black font-black px-8 py-3.5 rounded-xl text-sm sm:text-base shadow-lg flex items-center gap-2">
+              <span>إرسال ملف التقديم نهائياً</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- ==================== VIEW 3: TRACK APPLICATION ==================== -->
+    <section id="view-track" class="hidden max-w-3xl mx-auto space-y-6">
+      <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+        <div>
+          <span class="text-xs font-bold text-amber-400">بوابة الاستعلام الذاتي</span>
+          <h2 class="text-2xl font-black text-white mt-0.5">متابعة حالة طلب التقديم</h2>
+          <p class="text-xs sm:text-sm text-gray-400 mt-1">أدخل الرقم المرجعي للطلب (مثل <code class="text-amber-300">VTX-2026-1042</code>) أو اسم مستخدم الديسكورد الخاص بك لمعرفة حالة طلبك وملاحظات القيادة.</p>
+        </div>
+
+        
+        <!-- Track Discord Reminder -->
+        <div class="p-4 rounded-xl bg-indigo-950/40 border border-indigo-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs mb-4">
+          <div class="flex items-center gap-2.5 text-gray-200">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-indigo-500/20 text-indigo-400 shrink-0">
+              <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+            </span>
+            <span>سيرفر الديسكورد الرسمي: <strong class="text-indigo-300 font-mono">https://discord.gg/2na3tTWpt</strong> — مطلوب للتواصل مع الإدارة واستلام رتبتك بعد القبول.</span>
+          </div>
+          <a href="https://discord.gg/2na3tTWpt" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg discord-btn text-white font-bold shrink-0 text-center transition flex items-center justify-center gap-1.5 shadow">
+            <span>فتح الديسكورد ↗</span>
+          </a>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input id="trackSearchInput" type="text" placeholder="أدخل كود الطلب (مثال: VTX-2026-1042) أو معرف الديسكورد..." class="flex-1 rounded-xl bg-gray-900 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-sm text-white placeholder-gray-500" />
+          <button id="trackSearchBtn" type="button" class="gold-btn text-black font-black px-6 py-3 rounded-xl text-sm shrink-0">
+            بحث عن الطلب
+          </button>
+        </div>
+
+        <!-- Quick Demo Codes -->
+        <div class="flex flex-wrap items-center gap-2 text-xs text-gray-400">
+          <span>أكواد تجريبية للمعاينة الفورية:</span>
+          <button type="button" data-sample-code="VTX-2026-1042" class="sample-track-btn px-2.5 py-1 rounded-lg bg-gray-800 hover:bg-gray-700 text-amber-300 border border-gray-700 font-mono">VTX-2026-1042</button>
+          <button type="button" data-sample-code="VTX-2026-1089" class="sample-track-btn px-2.5 py-1 rounded-lg bg-gray-800 hover:bg-gray-700 text-emerald-300 border border-gray-700 font-mono">VTX-2026-1089</button>
+          <button type="button" data-sample-code="VTX-2026-1015" class="sample-track-btn px-2.5 py-1 rounded-lg bg-gray-800 hover:bg-gray-700 text-blue-300 border border-gray-700 font-mono">VTX-2026-1015</button>
+        </div>
+
+        <!-- Track Result Container -->
+        <div id="trackResultContainer" class="pt-2">
+          <div class="p-8 rounded-2xl bg-gray-900/50 border border-gray-800 text-center text-gray-400 text-sm">
+            أدخل رقم الطلب أعلاه أو اضغط على أحد الأكواد التجريبية لعرض بطاقة حالة المتقدم.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 4: ADMIN REVIEW DASHBOARD ==================== -->
+    <section id="view-admin" class="hidden space-y-6">
+      <!-- Admin Password Gate -->
+      <div id="adminLockScreen" class="max-w-md mx-auto my-8 glass-card rounded-3xl p-6 sm:p-8 border border-amber-500/30 shadow-2xl space-y-6 text-center">
+        <div class="w-16 h-16 rounded-2xl bg-amber-500/15 border border-amber-500/40 text-amber-400 flex items-center justify-center mx-auto text-3xl glow-badge">
+          🔒
+        </div>
+        <div class="space-y-1.5">
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">منطقة محمية</span>
+          <h2 class="text-2xl font-black text-white">تسجيل دخول القيادة العليا</h2>
+          <p class="text-xs text-gray-400 leading-relaxed">هذه اللوحة مخصصة فقط للقيادة العليا في سيرفر <strong>𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷</strong>. يرجى إدخال كلمة المرور للمتابعة.</p>
+        </div>
+
+        <form id="adminAuthForm" class="space-y-4 text-right" novalidate>
+          <div>
+            <label class="block text-xs font-bold text-gray-300 mb-2">كلمة مرور القيادة العليا</label>
+            <div class="relative flex items-center">
+              <input id="adminPasswordInput" type="password" dir="ltr" required placeholder="أدخل كلمة المرور هنا..." class="w-full rounded-xl bg-gray-950 border border-gray-700 focus:border-amber-500 focus:outline-none pr-4 pl-12 py-3 text-sm text-white placeholder-gray-500 text-left font-mono" />
+              <button id="toggleAdminPassBtn" type="button" class="absolute left-3 text-xs font-bold text-gray-400 hover:text-amber-400 transition">
+                إظهار
+              </button>
+            </div>
+            <p id="adminPassError" class="hidden text-xs font-bold text-red-400 mt-2">❌ كلمة المرور غير صحيحة، يرجى المحاولة مرة أخرى.</p>
+          </div>
+          <button type="submit" class="w-full gold-btn text-black font-black py-3.5 rounded-xl text-sm shadow-lg flex items-center justify-center gap-2">
+            <span>فتح لوحة القيادة العليا</span>
+            <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Protected Dashboard Content -->
+      <div id="adminProtectedContent" class="hidden space-y-6">
+        <!-- Top Admin Bar -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">خاص بالقيادة العليا</span>
+              <span class="text-xs text-gray-400">High Command Panel</span>
+            </div>
+            <h2 class="text-2xl font-black text-white mt-1">لوحة فرز ومراجعة المتقدمين — 𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷</h2>
+            <p class="text-xs text-gray-400">يمكنك مراجعة إجابات المتقدمين، قبولهم، تحويلهم للمقابلة الصوتية، أو ربط إشعارات الديسكورد Webhook.</p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5">
+            <!-- Cloud DB Status & Settings Button -->
+            <button id="openCloudDbModalBtn" type="button" class="px-3.5 py-2.5 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 text-xs font-bold flex items-center gap-2 transition shadow-sm">
+              <span id="cloudStatusIcon">🗄️</span>
+              <span id="cloudStatusText">قاعدة البيانات السحابية (Firebase)</span>
+              <span id="cloudStatusDot" class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+            </button>
+
+            <!-- Sync Now Button -->
+            <button id="syncCloudDbBtn" type="button" class="px-3.5 py-2.5 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/40 text-xs font-bold flex items-center gap-1.5 transition">
+              <span id="syncIcon" class="inline-block transition-transform duration-500">🔄</span>
+              <span>مزامنة السحابة</span>
+            </button>
+
+            <!-- Discord Webhook -->
+            <button id="openWebhookModalBtn" type="button" class="px-3.5 py-2.5 rounded-xl bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-300 border border-indigo-500/40 text-xs font-bold flex items-center gap-1.5 transition">
+              <span>🔗 Discord Webhook</span>
+            </button>
+
+            <!-- Backup & Export buttons -->
+            <button id="exportAppsJsonBtn" type="button" class="px-3 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 text-xs font-bold transition">
+              ⬇️ تصدير JSON
+            </button>
+            <button id="exportAppsCsvBtn" type="button" class="px-3 py-2.5 rounded-xl bg-emerald-950/60 hover:bg-emerald-900/60 text-emerald-300 border border-emerald-500/40 text-xs font-bold transition flex items-center gap-1">
+              <span>📊</span>
+              <span>تصدير Excel</span>
+            </button>
+            <button id="importAppsJsonTriggerBtn" type="button" class="px-3 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 text-xs font-bold transition flex items-center gap-1">
+              <span>⬆️</span>
+              <span>استيراد نسخة</span>
+            </button>
+            <input id="importJsonFileInput" type="file" accept=".json" class="hidden" />
+
+            <!-- Clear & Lock -->
+            <button id="clearAllAppsBtn" type="button" class="px-3 py-2.5 rounded-xl bg-gray-800 hover:bg-red-950/60 text-gray-300 hover:text-red-300 border border-gray-700 text-xs font-bold transition">
+              🗑️ تصفير الطلبات
+            </button>
+            <button id="lockAdminPanelBtn" type="button" class="px-3 py-2.5 rounded-xl bg-red-500/15 hover:bg-red-500/25 text-red-300 border border-red-500/30 text-xs font-bold transition">
+              🔒 قفل اللوحة
+            </button>
+          </div>
+        </div>
+
+      <!-- Admin KPI Cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="glass-card-subtle rounded-2xl p-4 border-r-4 border-r-amber-500">
+          <p class="text-xs text-gray-400">قيد المراجعة</p>
+          <p id="kpiPending" class="text-2xl font-black text-amber-400 mt-1">1</p>
+        </div>
+        <div class="glass-card-subtle rounded-2xl p-4 border-r-4 border-r-blue-500">
+          <p class="text-xs text-gray-400">مؤهل للمقابلة الصوتية</p>
+          <p id="kpiInterview" class="text-2xl font-black text-blue-400 mt-1">1</p>
+        </div>
+        <div class="glass-card-subtle rounded-2xl p-4 border-r-4 border-r-emerald-500">
+          <p class="text-xs text-gray-400">مقبول في الإدارة</p>
+          <p id="kpiAccepted" class="text-2xl font-black text-emerald-400 mt-1">1</p>
+        </div>
+        <div class="glass-card-subtle rounded-2xl p-4 border-r-4 border-r-red-500">
+          <p class="text-xs text-gray-400">مرفوض</p>
+          <p id="kpiRejected" class="text-2xl font-black text-red-400 mt-1">1</p>
+        </div>
+      </div>
+
+      <!-- Filters & Search -->
+      <div class="glass-card rounded-2xl p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+        <div class="flex flex-wrap items-center gap-1.5">
+          <button type="button" data-filter-status="all" class="admin-filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-amber-500 text-black">الكل</button>
+          <button type="button" data-filter-status="قيد المراجعة" class="admin-filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-gray-800 text-gray-300 hover:bg-gray-700">قيد المراجعة</button>
+          <button type="button" data-filter-status="مؤهل للمقابلة" class="admin-filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-gray-800 text-gray-300 hover:bg-gray-700">مؤهل للمقابلة</button>
+          <button type="button" data-filter-status="مقبول" class="admin-filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-gray-800 text-gray-300 hover:bg-gray-700">مقبول</button>
+          <button type="button" data-filter-status="مرفوض" class="admin-filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-gray-800 text-gray-300 hover:bg-gray-700">مرفوض</button>
+        </div>
+        <div class="w-full sm:w-72">
+          <input id="adminSearchInput" type="text" placeholder="ابحث بالاسم أو الكود أو القسم..." class="w-full rounded-xl bg-gray-900 border border-gray-700 focus:border-amber-500 focus:outline-none px-3.5 py-2 text-xs text-white" />
+        </div>
+      </div>
+
+      <!-- Applications List & Inspector Split -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Left List -->
+        <div id="adminAppsList" class="lg:col-span-5 space-y-3 max-h-[650px] overflow-y-auto custom-scrollbar pl-1"></div>
+
+        <!-- Right Detail Inspector -->
+        <div id="adminAppInspector" class="lg:col-span-7 glass-card rounded-2xl p-6 min-h-[420px]"></div>
+      </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== SUBMISSION SUCCESS MODAL ==================== -->
+  <div id="successModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div class="glass-card rounded-3xl max-w-md w-full p-6 sm:p-8 text-center space-y-5 border border-amber-500/40 shadow-2xl">
+      <div class="w-16 h-16 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto text-3xl">
+        🎉
+      </div>
+      <div class="space-y-1">
+        <h3 class="text-2xl font-black text-white">تم إرسال تقديمك بنجاح!</h3>
+        <p class="text-xs sm:text-sm text-gray-300">تم تسجيل طلبك في نظام إدارة <strong>𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷</strong>. احتفظ بالرقم المرجعي التالي لمتابعة حالة طلبك:</p>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-gray-950 border border-amber-500/40 flex items-center justify-between gap-2">
+        <span id="modalTrackingCode" class="font-mono text-lg sm:text-xl font-black text-amber-400 tracking-wider">VTX-2026-0000</span>
+        <button id="copyTrackingCodeBtn" type="button" class="px-3 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500 hover:text-black text-amber-300 text-xs font-bold transition">
+          نسخ الكود
+        </button>
+      </div>
+
+      <div class="text-xs text-gray-400 bg-gray-900/70 p-3.5 rounded-xl border border-gray-800 flex items-center justify-between">
+        <span>نتيجة اختبار القوانين (RP Quiz):</span>
+        <span id="modalQuizScore" class="font-black text-emerald-400">100% (4/4)</span>
+      </div>
+
+      
+      <!-- Modal Discord Box -->
+      <div class="p-4 rounded-2xl bg-indigo-950/40 border border-indigo-500/40 text-right space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-indigo-300 flex items-center gap-1.5">
+            <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+            سيرفر الديسكورد الرسمي:
+          </span>
+          <span class="text-[11px] px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-mono">discord.gg/2na3tTWpt</span>
+        </div>
+        <p class="text-xs text-gray-300 leading-relaxed">
+          انضم إلى السيرفر الآن لمتابعة إعلان النتائج. في حال قبولك، انسخ رقم التقديم وافتحه في تذكرة بالديسكورد.
+        </p>
+        <a href="https://discord.gg/2na3tTWpt" target="_blank" rel="noopener noreferrer" class="w-full discord-btn text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow">
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+          <span>الدخول إلى سيرفر الديسكورد الآن ↗</span>
+        </a>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-2.5 pt-2">
+        <button id="modalGoTrackBtn" type="button" class="flex-1 gold-btn text-black font-black py-3 rounded-xl text-sm">
+          متابعة حالة الطلب الآن
+        </button>
+        <button id="closeSuccessModalBtn" type="button" class="px-5 py-3 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-300 font-bold text-sm">
+          إغلاق
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== DISCORD WEBHOOK MODAL ==================== -->
+    <!-- ==================== CLOUD DATABASE MODAL ==================== -->
+  <div id="cloudDbModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 overflow-y-auto">
+    <div class="glass-card rounded-3xl max-w-2xl w-full p-6 sm:p-8 space-y-6 border border-amber-500/40 shadow-2xl my-8 text-right" dir="rtl">
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl font-bold border border-amber-500/30 shrink-0">
+            🗄️
+          </div>
+          <div>
+            <h3 class="text-xl font-black text-white">إدارة وحفظ قاعدة البيانات (سحابية ومحلية دائمية)</h3>
+            <p class="text-xs text-gray-400">حفظ تلقائي دائم لجميع الطلبات لضمان عدم مسح أي بيانات على الإطلاق</p>
+          </div>
+        </div>
+        <button id="closeCloudDbModalBtn" type="button" class="text-gray-400 hover:text-white text-xl font-bold p-1 transition">✕</button>
+      </div>
+
+      <!-- Current Storage Health Status Box -->
+      <div class="p-4 rounded-2xl bg-gray-950/70 border border-gray-800 space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-xs font-bold text-gray-300">حالة قاعدة البيانات الحالية:</span>
+          <span id="modalCloudStatusBadge" class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            قاعدة بيانات محلية دائمية (IndexedDB نشط)
+          </span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1 text-xs">
+          <div class="p-3 rounded-xl bg-gray-900 border border-gray-800 space-y-1">
+            <span class="text-gray-400 block text-[11px]">الذاكرة الدائمة (IndexedDB)</span>
+            <span class="font-bold text-emerald-400 flex items-center gap-1">
+              <span>نشطة ومحمية</span>
+              <span>🛡️</span>
+            </span>
+          </div>
+          <div class="p-3 rounded-xl bg-gray-900 border border-gray-800 space-y-1">
+            <span class="text-gray-400 block text-[11px]">عدد الطلبات المحفوظة</span>
+            <span id="modalSavedCount" class="font-bold text-amber-400 font-mono text-sm">0 طلب</span>
+          </div>
+          <div class="p-3 rounded-xl bg-gray-900 border border-gray-800 space-y-1">
+            <span class="text-gray-400 block text-[11px]">المزامنة بين الأجهزة</span>
+            <span id="modalSyncState" class="font-bold text-gray-300 text-xs">محلية فقط</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Explanation & How It Works -->
+      <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-orange-500/5 to-transparent border border-amber-500/20 space-y-2">
+        <h4 class="text-xs sm:text-sm font-black text-amber-300 flex items-center gap-1.5">
+          <span>💡</span> كيف تضمن وصول طلبات جميع اللاعبين من هواتفهم إلى جهازك؟
+        </h4>
+        <p class="text-xs text-gray-300 leading-relaxed">
+          الموقع مجهز بنظامين متكاملين لحفظ البيانات:
+          <br>
+          1. <strong>قاعدة بيانات المتصفح الدائمة (IndexedDB)</strong>: تعمل تلقائياً الآن وتخزن الطلبات بأمان حتى لو أغلقت المتصفح.
+          <br>
+          2. <strong>قاعدة البيانات السحابية الحية (Google Firebase)</strong>: تتيح لأي لاعب يقدم من هاتفه أن يظهر طلبه فوراً في لوحتك على أي جهاز آخر، ومجانية 100% وبدون أي سيرفر.
+        </p>
+      </div>
+
+      <!-- Cloud DB Configuration Form -->
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-gray-300 mb-1.5">
+            رابط قاعدة بيانات Firebase السحابية (Firebase Realtime Database REST URL)
+          </label>
+          <div class="relative">
+            <input id="cloudDbUrlInput" type="url" dir="ltr" placeholder="https://v-texas-rp-default-rtdb.firebaseio.com" class="w-full rounded-xl bg-gray-950 border border-gray-700 focus:border-amber-500 focus:outline-none px-4 py-3 text-xs sm:text-sm text-white placeholder-gray-500 font-mono text-left" />
+          </div>
+          <p class="text-[11px] text-gray-400 mt-1.5">
+            ضع هنا رابط مشروعك في Firebase (مثال: <code class="text-amber-400 font-mono">https://v-texas-rp-default-rtdb.firebaseio.com</code>) أو رابط Google Apps Script Web App.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2 pt-1">
+          <input id="cloudAutoSyncCheckbox" type="checkbox" checked class="w-4 h-4 rounded bg-gray-900 border-gray-700 text-amber-500 focus:ring-amber-500 cursor-pointer" />
+          <label for="cloudAutoSyncCheckbox" class="text-xs text-gray-300 cursor-pointer select-none">
+            تفعيل المزامنة التلقائية فوراً عند تقديم أي طلب جديد
+          </label>
+        </div>
+
+        <!-- Connection Test Result Banner -->
+        <div id="testConnResultBox" class="hidden p-3 rounded-xl text-xs font-bold border transition"></div>
+
+        <!-- Step-by-step instructions accordion -->
+        <div class="border border-gray-800 rounded-2xl overflow-hidden">
+          <button id="toggleDbGuideBtn" type="button" class="w-full p-3.5 bg-gray-900/90 hover:bg-gray-800 text-right text-xs font-bold text-gray-300 flex items-center justify-between transition">
+            <span class="flex items-center gap-2">
+              <span>📖</span>
+              <span>دليل إعداد قاعدة بيانات Google Firebase مجاناً في دقيقتين (خطوة بخطوة)</span>
+            </span>
+            <span id="guideArrow" class="text-amber-400 transition-transform">▼</span>
+          </button>
+          <div id="dbGuideContent" class="hidden p-4 bg-gray-950/80 space-y-2.5 text-xs text-gray-300 leading-relaxed border-t border-gray-800">
+            <ol class="list-decimal list-inside space-y-2">
+              <li>افتح موقع <a href="https://console.firebase.google.com" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline font-mono">console.firebase.google.com</a> وسجل بحساب Google الخاص بك مجاناً.</li>
+              <li>اضغط على <strong>Create a project</strong> (إضافة مشروع) وسمّ المشروع <strong>v-texas-rp</strong> واضغط متابعة.</li>
+              <li>من القائمة الجانبية اختر <strong>Build</strong> ثم اضغط على <strong>Realtime Database</strong>.</li>
+              <li>اضغط <strong>Create Database</strong> واختر أي موقع (مثلاً United States) ثم اختر <strong>Start in test mode</strong>.</li>
+              <li>في تبويب <strong>Rules (القواعد)</strong> تأكد أن القراءة والكتابة مسموحة:
+                <pre class="bg-gray-900 p-2.5 rounded-lg text-[11px] font-mono text-amber-300 mt-1.5 text-left" dir="ltr">{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}</pre>
+                ثم اضغط زر <strong>Publish</strong> الأزرق.
+              </li>
+              <li>انسخ الرابط الذي يظهر في الأعلى مباشرة (يبدأ بـ <code class="text-amber-400">https://...firebaseio.com</code>) والصقه في الحقل أعلاه واضغط <strong>حفظ وفحص الاتصال</strong>.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-gray-800">
+        <div class="flex flex-wrap items-center gap-2">
+          <button id="testCloudDbBtn" type="button" class="px-4 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 text-xs font-bold transition flex items-center gap-1.5">
+            <span>🧪</span>
+            <span>فحص الاتصال</span>
+          </button>
+          <button id="forceUploadLocalToCloudBtn" type="button" class="px-4 py-2.5 rounded-xl bg-cyan-950/60 hover:bg-cyan-900/60 text-cyan-300 border border-cyan-500/40 text-xs font-bold transition flex items-center gap-1.5">
+            <span>⬆️</span>
+            <span>رفع البيانات الحالية للسحابة</span>
+          </button>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="disconnectCloudDbBtn" type="button" class="px-3.5 py-2.5 rounded-xl bg-red-950/40 hover:bg-red-900/40 text-red-300 border border-red-500/30 text-xs font-bold transition">
+            إلغاء الربط
+          </button>
+          <button id="saveCloudDbSettingsBtn" type="button" class="gold-btn text-black font-black px-6 py-2.5 rounded-xl text-xs sm:text-sm shadow-lg">
+            💾 حفظ الإعدادات والمزامنة
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CLEAR CONFIRM MODAL ==================== -->
+  <div id="clearConfirmModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-md p-4">
+    <div class="glass-card rounded-3xl max-w-md w-full p-6 space-y-5 border border-red-500/40 text-right" dir="rtl">
+      <div class="flex items-center gap-3 text-red-400">
+        <div class="w-12 h-12 rounded-2xl bg-red-500/20 flex items-center justify-center text-2xl font-bold border border-red-500/30 shrink-0">
+          ⚠️
+        </div>
+        <div>
+          <h3 class="text-lg font-black text-white">تأكيد تصفير كافة الطلبات</h3>
+          <p class="text-xs text-red-300">هذا الإجراء سيحذف كافة الطلبات نهائياً من الذاكرة والسحابة!</p>
+        </div>
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-gray-300 mb-2">أدخل كلمة مرور القيادة العليا للتأكيد:</label>
+        <input id="confirmClearPassInput" type="password" dir="ltr" placeholder="أدخل كلمة المرور..." class="w-full rounded-xl bg-gray-950 border border-gray-700 focus:border-red-500 focus:outline-none px-4 py-3 text-xs sm:text-sm text-white font-mono text-left" />
+        <p id="confirmClearError" class="hidden text-xs font-bold text-red-400 mt-1.5">❌ كلمة المرور غير صحيحة!</p>
+      </div>
+      <div class="flex items-center justify-end gap-2 pt-2 border-t border-gray-800">
+        <button id="cancelClearBtn" type="button" class="px-4 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs font-bold transition">
+          إلغاء
+        </button>
+        <button id="executeClearBtn" type="button" class="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-black text-xs transition shadow-lg">
+          مسح وتصفير نهائي
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== IMPORT CONFIRM MODAL ==================== -->
+  <div id="importConfirmModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-md p-4">
+    <div class="glass-card rounded-3xl max-w-md w-full p-6 space-y-5 border border-cyan-500/40 text-right" dir="rtl">
+      <div class="flex items-center gap-3 text-cyan-400">
+        <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 flex items-center justify-center text-2xl font-bold border border-cyan-500/30 shrink-0">
+          📥
+        </div>
+        <div>
+          <h3 class="text-lg font-black text-white">استيراد ودمج نسخة احتياطية</h3>
+          <p id="importSummaryText" class="text-xs text-gray-300">تم فحص الملف بنجاح.</p>
+        </div>
+      </div>
+      <p class="text-xs text-gray-300 leading-relaxed">
+        سيتم دمج الطلبات الموجودة في الملف مع قاعدة البيانات الحالية ومزامنتها سحابياً فوراً.
+      </p>
+      <div class="flex items-center justify-end gap-2 pt-2 border-t border-gray-800">
+        <button id="cancelImportBtn" type="button" class="px-4 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs font-bold transition">
+          إلغاء
+        </button>
+        <button id="executeImportBtn" type="button" class="px-5 py-2.5 rounded-xl gold-btn text-black font-black text-xs transition shadow-lg">
+          تأكيد الاستيراد والدمج
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="webhookModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div class="glass-card rounded-3xl max-w-lg w-full p-6 sm:p-8 space-y-5 border border-indigo-500/40">
+      <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+        <h3 class="text-xl font-black text-white">🔗 ربط التقديمات مع روم الديسكورد (Webhook)</h3>
+        <button id="closeWebhookModalBtn" type="button" class="text-gray-400 hover:text-white text-lg font-bold">✕</button>
+      </div>
+      <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+        أدخل رابط <strong>Discord Webhook</strong> الخاص بروم التقديمات في سيرفر <strong>𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷</strong> ليقوم الموقع بإرسال بطاقة كل متقدم جديد تلقائياً إلى الديسكورد فور ضغطه على زر الإرسال.
+      </p>
+      <div>
+        <label class="block text-xs font-bold text-gray-300 mb-2">رابط الـ Webhook (اختياري)</label>
+        <input id="webhookUrlInput" type="url" dir="ltr" placeholder="https://discord.com/api/webhooks/..." class="w-full rounded-xl bg-gray-950 border border-gray-700 focus:border-indigo-500 focus:outline-none px-4 py-3 text-xs sm:text-sm text-white" />
+      </div>
+      <div class="flex items-center justify-end gap-2 pt-2">
+        <button id="saveWebhookBtn" type="button" class="gold-btn text-black font-black px-6 py-2.5 rounded-xl text-sm">
+          حفظ الإعدادات
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-900 bg-obsidian-950/90 py-6 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+      <div class="flex items-center gap-2">
+        <span class="font-black text-amber-500">𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷</span>
+        <span>— جميع الحقوق محفوظة لإدارة السيرفر © 2026</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <button type="button" data-nav="home" class="nav-tab hover:text-amber-400 transition">الشروط والقوانين</button>
+        <button type="button" data-nav="apply" class="nav-tab hover:text-amber-400 transition">نموذج التقديم</button>
+        
+        <!-- Footer Discord Link -->
+        <a href="https://discord.gg/2na3tTWpt" target="_blank" rel="noopener noreferrer" class="discord-btn text-white font-bold px-3.5 py-1.5 rounded-xl text-xs flex items-center gap-2 shadow transition">
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+          <span>سيرفر الديسكورد الرسمي: discord.gg/2na3tTWpt</span>
+        </a>
+        <button type="button" data-nav="track" class="nav-tab hover:text-amber-400 transition">الاستعلام عن طلب</button>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Application Logic -->
+  <script>
+    (function () {
+      const OLD_STORAGE_KEY = 'v_texas_rp_applications_v1';
+      const STORAGE_KEY = 'v_texas_rp_applications_live_v2';
+      const WEBHOOK_KEY = 'v_texas_rp_webhook_v1';
+      const CLOUD_DB_KEY = 'v_texas_rp_cloud_db_url_v2';
+      const CLOUD_AUTO_SYNC_KEY = 'v_texas_rp_cloud_auto_sync_v2';
+      const DISCORD_INVITE_URL = 'https://discord.gg/2na3tTWpt';
+
+      const IDB_NAME = 'VTexasRP_Database_Live';
+      const IDB_STORE = 'applications';
+      const IDB_VERSION = 2;
+
+      // Clean production state: zero fake/mock applications
+      const defaultApplications = [];
+
+      let applications = [];
+      let selectedAdminAppId = null;
+      let currentAdminFilter = 'all';
+      let currentStep = 1;
+      let lastCreatedCode = '';
+      let isAdminAuthenticated = false;
+      let dbInstance = null;
+      let pendingImportData = null;
+
+      const ALLOWED_ADMIN_PASSWORDS = [
+        '/𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷 1710199',
+        '𝑽 𝑻𝑬𝑿𝑨𝑺 𝑹𝑷 1710199',
+        '/V TEXAS RP 1710199',
+        'V TEXAS RP 1710199'
+      ];
+
+      function copyTextToClipboard(text, successMsg) {
+        const tempInput = document.createElement('input');
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        tempInput.remove();
+        showToast(successMsg || 'تم نسخ رقم التقديم بنجاح!', 'info');
+      }
+
+      // ==================== INDEXEDDB ENGINE ====================
+      function openIndexedDB() {
+        return new Promise((resolve) => {
+          if (!window.indexedDB) {
+            resolve(null);
+            return;
+          }
+          try {
+            const req = window.indexedDB.open(IDB_NAME, IDB_VERSION);
+            req.onupgradeneeded = function (e) {
+              const db = e.target.result;
+              if (!db.objectStoreNames.contains(IDB_STORE)) {
+                db.createObjectStore(IDB_STORE, { keyPath: 'id' });
+              }
+            };
+            req.onsuccess = function (e) {
+              dbInstance = e.target.result;
+              resolve(dbInstance);
+            };
+            req.onerror = function () {
+              resolve(null);
+            };
+          } catch (e) {
+            resolve(null);
+          }
+        });
+      }
+
+      function idbGetAll() {
+        return new Promise((resolve) => {
+          if (!dbInstance) {
+            resolve([]);
+            return;
+          }
+          try {
+            const tx = dbInstance.transaction(IDB_STORE, 'readonly');
+            const store = tx.objectStore(IDB_STORE);
+            const req = store.getAll();
+            req.onsuccess = () => resolve(req.result || []);
+            req.onerror = () => resolve([]);
+          } catch (e) {
+            resolve([]);
+          }
+        });
+      }
+
+      function idbPut(item) {
+        return new Promise((resolve) => {
+          if (!dbInstance) {
+            resolve(false);
+            return;
+          }
+          try {
+            const tx = dbInstance.transaction(IDB_STORE, 'readwrite');
+            const store = tx.objectStore(IDB_STORE);
+            const req = store.put(item);
+            req.onsuccess = () => resolve(true);
+            req.onerror = () => resolve(false);
+          } catch (e) {
+            resolve(false);
+          }
+        });
+      }
+
+      function idbPutAll(items) {
+        return new Promise((resolve) => {
+          if (!dbInstance) {
+            resolve(false);
+            return;
+          }
+          try {
+            const tx = dbInstance.transaction(IDB_STORE, 'readwrite');
+            const store = tx.objectStore(IDB_STORE);
+            store.clear();
+            items.forEach(item => {
+              if (item && item.id) store.put(item);
+            });
+            tx.oncomplete = () => resolve(true);
+            tx.onerror = () => resolve(false);
+          } catch (e) {
+            resolve(false);
+          }
+        });
+      }
+
+      function idbClear() {
+        return new Promise((resolve) => {
+          if (!dbInstance) {
+            resolve(false);
+            return;
+          }
+          try {
+            const tx = dbInstance.transaction(IDB_STORE, 'readwrite');
+            const store = tx.objectStore(IDB_STORE);
+            store.clear();
+            tx.oncomplete = () => resolve(true);
+            tx.onerror = () => resolve(false);
+          } catch (e) {
+            resolve(false);
+          }
+        });
+      }
+
+      function requestPersistentStorage() {
+        try {
+          if (navigator.storage && navigator.storage.persist) {
+            navigator.storage.persist().catch(() => {});
+          }
+        } catch (e) {}
+      }
+
+      // ==================== CLOUD DATABASE ENGINE ====================
+      function getCloudDbUrl() {
+        try {
+          return (localStorage.getItem(CLOUD_DB_KEY) || '').trim();
+        } catch (e) {
+          return '';
+        }
+      }
+
+      function setCloudDbUrl(url) {
+        try {
+          localStorage.setItem(CLOUD_DB_KEY, (url || '').trim());
+        } catch (e) {}
+      }
+
+      function getCloudAutoSync() {
+        try {
+          return localStorage.getItem(CLOUD_AUTO_SYNC_KEY) !== 'false';
+        } catch (e) {
+          return true;
+        }
+      }
+
+      function setCloudAutoSync(enabled) {
+        try {
+          localStorage.setItem(CLOUD_AUTO_SYNC_KEY, enabled ? 'true' : 'false');
+        } catch (e) {}
+      }
+
+      function normalizeCloudUrl(url) {
+        if (!url) return '';
+        let clean = url.trim().replace(/\/+$/, '');
+        if (clean.endsWith('.json')) {
+          clean = clean.substring(0, clean.lastIndexOf('/'));
+        }
+        if (clean.endsWith('/applications')) {
+          clean = clean.substring(0, clean.lastIndexOf('/applications'));
+        }
+        return clean;
+      }
+
+      async function fetchCloudApplications() {
+        const base = normalizeCloudUrl(getCloudDbUrl());
+        if (!base) return null;
+        try {
+          const res = await fetch(`${base}/applications.json`, { cache: 'no-store' });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const data = await res.json();
+          if (!data) return [];
+          if (Array.isArray(data)) {
+            return data.filter(item => item && item.id);
+          }
+          if (typeof data === 'object') {
+            return Object.values(data).filter(item => item && item.id);
+          }
+          return [];
+        } catch (err) {
+          console.warn('Cloud DB fetch error:', err);
+          throw err;
+        }
+      }
+
+      async function pushApplicationToCloud(app) {
+        const base = normalizeCloudUrl(getCloudDbUrl());
+        if (!base || !app || !app.id) return false;
+        try {
+          const res = await fetch(`${base}/applications/${encodeURIComponent(app.id)}.json`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(app)
+          });
+          return res.ok;
+        } catch (e) {
+          console.warn('Cloud push failed:', e);
+          return false;
+        }
+      }
+
+      async function patchApplicationInCloud(appId, patch) {
+        const base = normalizeCloudUrl(getCloudDbUrl());
+        if (!base || !appId) return false;
+        try {
+          const res = await fetch(`${base}/applications/${encodeURIComponent(appId)}.json`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(patch)
+          });
+          return res.ok;
+        } catch (e) {
+          console.warn('Cloud patch failed:', e);
+          return false;
+        }
+      }
+
+      async function syncWithCloud(silent) {
+        const cloudUrl = getCloudDbUrl();
+        if (!cloudUrl) {
+          if (!silent) showToast('لم يتم ضبط رابط قاعدة البيانات السحابية بعد.', 'error');
+          updateCloudStatusUI();
+          return;
+        }
+
+        const syncBtn = document.getElementById('syncCloudDbBtn');
+        const syncIcon = document.getElementById('syncIcon');
+        if (syncIcon) syncIcon.classList.add('animate-spin');
+        if (syncBtn) syncBtn.classList.add('opacity-75');
+
+        try {
+          const cloudApps = await fetchCloudApplications();
+          if (cloudApps === null) throw new Error('تعذر جلب البيانات');
+
+          const appMap = new Map();
+          applications.forEach(a => {
+            if (a && a.id) appMap.set(a.id, a);
+          });
+
+          cloudApps.forEach(cApp => {
+            if (!cApp || !cApp.id) return;
+            if (!appMap.has(cApp.id)) {
+              appMap.set(cApp.id, cApp);
+            } else {
+              const local = appMap.get(cApp.id);
+              if (cApp.status !== local.status || (cApp.adminNote && cApp.adminNote !== local.adminNote)) {
+                appMap.set(cApp.id, Object.assign({}, local, cApp));
+              }
+            }
+          });
+
+          const cloudIds = new Set(cloudApps.map(c => c && c.id));
+          const uploadQueue = [];
+          applications.forEach(localApp => {
+            if (localApp && localApp.id && !cloudIds.has(localApp.id)) {
+              uploadQueue.push(localApp);
+            }
+          });
+
+          applications = Array.from(appMap.values());
+          applications.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+
+          saveState();
+          updateCounters();
+          renderAdminDashboard();
+          updateCloudStatusUI();
+
+          if (uploadQueue.length > 0) {
+            Promise.all(uploadQueue.map(a => pushApplicationToCloud(a))).catch(() => {});
+          }
+
+          if (!silent) {
+            showToast(`🟢 تمت المزامنة السحابية بنجاح! تم فحص وتحديث ${applications.length} طلب.`, 'info');
+          }
+        } catch (err) {
+          console.error('Sync failed:', err);
+          if (!silent) {
+            showToast('❌ تعذر إتمام المزامنة السحابية. تأكد من صحة الرابط وقواعد Firebase.', 'error');
+          }
+        } finally {
+          if (syncIcon) syncIcon.classList.remove('animate-spin');
+          if (syncBtn) syncBtn.classList.remove('opacity-75');
+        }
+      }
+
+      function updateCloudStatusUI() {
+        const url = getCloudDbUrl();
+        const isCloud = Boolean(url);
+
+        const cloudStatusText = document.getElementById('cloudStatusText');
+        const cloudStatusDot = document.getElementById('cloudStatusDot');
+        const cloudStatusIcon = document.getElementById('cloudStatusIcon');
+
+        if (cloudStatusText && cloudStatusDot && cloudStatusIcon) {
+          if (isCloud) {
+            cloudStatusIcon.textContent = '☁️';
+            cloudStatusText.textContent = 'قاعدة سحابية متصلة (Firebase)';
+            cloudStatusDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse';
+          } else {
+            cloudStatusIcon.textContent = '🗄️';
+            cloudStatusText.textContent = 'قاعدة بيانات محلية دائمية (IndexedDB)';
+            cloudStatusDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-400';
+          }
+        }
+
+        const modalBadge = document.getElementById('modalCloudStatusBadge');
+        const modalSavedCount = document.getElementById('modalSavedCount');
+        const modalSyncState = document.getElementById('modalSyncState');
+
+        if (modalSavedCount) {
+          modalSavedCount.textContent = `${applications.length} طلب`;
+        }
+        if (modalBadge) {
+          if (isCloud) {
+            modalBadge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1.5';
+            modalBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> متصل بقاعدة البيانات السحابية (Firebase Live)';
+          } else {
+            modalBadge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 flex items-center gap-1.5';
+            modalBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-amber-400"></span> قاعدة بيانات محلية دائمية (IndexedDB نشط)';
+          }
+        }
+        if (modalSyncState) {
+          modalSyncState.textContent = isCloud ? 'مزامنة سحابية نشطة 🟢' : 'تخزين محلي آمن 🟡';
+        }
+      }
+
+      // ==================== STATE MANAGEMENT ====================
+      async function loadState() {
+        try {
+          localStorage.removeItem(OLD_STORAGE_KEY);
+          requestPersistentStorage();
+          await openIndexedDB();
+
+          const idbApps = await idbGetAll();
+          if (idbApps && idbApps.length > 0) {
+            applications = idbApps;
+            try {
+              localStorage.setItem(STORAGE_KEY, JSON.stringify(applications));
+            } catch (e) {}
+          } else {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            if (raw) {
+              const parsed = JSON.parse(raw);
+              applications = Array.isArray(parsed) ? parsed : [];
+              if (applications.length > 0) {
+                idbPutAll(applications);
+              }
+            } else {
+              applications = defaultApplications.slice();
+              saveState();
+            }
+          }
+        } catch (e) {
+          applications = defaultApplications.slice();
+        }
+
+        if (applications.length > 0 && !selectedAdminAppId) {
+          selectedAdminAppId = applications[0].id;
+        }
+
+        updateCounters();
+        updateCloudStatusUI();
+
+        if (getCloudDbUrl()) {
+          syncWithCloud(true).catch(() => {});
+        }
+      }
+
+      function saveState() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(applications));
+        } catch (e) {}
+        idbPutAll(applications);
+      }
+
+      function getWebhookUrl() {
+        try {
+          return localStorage.getItem(WEBHOOK_KEY) || '';
+        } catch (e) {
+          return '';
+        }
+      }
+
+      function setWebhookUrl(url) {
+        try {
+          localStorage.setItem(WEBHOOK_KEY, url.trim());
+        } catch (e) {}
+      }
+
+      function showToast(message, type) {
+        const container = document.getElementById('toastContainer');
+        if (!container) return;
+        const toast = document.createElement('div');
+        const bgClass = type === 'error'
+          ? 'bg-red-950/95 border-red-500/50 text-red-200'
+          : 'bg-gray-900/95 border-amber-500/40 text-amber-200';
+
+        toast.className = `p-4 rounded-2xl border shadow-2xl backdrop-blur-md text-xs sm:text-sm font-bold flex items-center justify-between gap-3 ${bgClass} transition-all duration-300`;
+        toast.innerHTML = `
+          <span>${message}</span>
+          <button class="text-xs font-black opacity-60 hover:opacity-100">✕</button>
+        `;
+        toast.querySelector('button').addEventListener('click', () => toast.remove());
+        container.appendChild(toast);
+        setTimeout(() => {
+          if (toast.parentNode) toast.remove();
+        }, 5000);
+      }
+
+      function switchView(viewName) {
+        const views = ['home', 'apply', 'track', 'admin'];
+        views.forEach(v => {
+          const el = document.getElementById('view-' + v);
+          if (el) {
+            if (v === viewName) {
+              el.classList.remove('hidden');
+            } else {
+              el.classList.add('hidden');
+            }
+          }
+        });
+
+        document.querySelectorAll('.nav-tab').forEach(btn => {
+          const target = btn.getAttribute('data-nav');
+          if (!btn.closest('footer')) {
+            if (target === viewName) {
+              btn.className = btn.className
+                .replace(/text-gray-300|hover:text-white|hover:bg-gray-800\/60|hover:bg-gray-800/g, '')
+                + ' bg-amber-500 text-black shadow';
+            } else {
+              btn.className = btn.className
+                .replace(/bg-amber-500|text-black|shadow/g, '')
+                + ' text-gray-300 hover:text-white hover:bg-gray-800/60';
+            }
+          }
+        });
+
+        const mobileDrawer = document.getElementById('mobileMenuDrawer');
+        if (mobileDrawer) mobileDrawer.classList.add('hidden');
+
+        if (viewName === 'admin') {
+          if (isAdminAuthenticated) {
+            document.getElementById('adminLockScreen').classList.add('hidden');
+            document.getElementById('adminProtectedContent').classList.remove('hidden');
+            renderAdminDashboard();
+            updateCloudStatusUI();
+          } else {
+            document.getElementById('adminLockScreen').classList.remove('hidden');
+            document.getElementById('adminProtectedContent').classList.add('hidden');
+          }
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      function setFormStep(step) {
+        currentStep = step;
+        [1, 2, 3].forEach(s => {
+          const panel = document.getElementById('form-step-' + s);
+          if (panel) {
+            if (s === step) panel.classList.remove('hidden');
+            else panel.classList.add('hidden');
+          }
+        });
+
+        document.querySelectorAll('.step-indicator').forEach(btn => {
+          const s = parseInt(btn.getAttribute('data-step-btn'), 10);
+          const badge = btn.querySelector('span');
+          if (s === step) {
+            btn.className = 'step-indicator flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-amber-500 text-black shadow-lg';
+            if (badge) badge.className = 'w-5 h-5 rounded-full bg-black text-amber-400 flex items-center justify-center text-xs font-black';
+          } else if (s < step) {
+            btn.className = 'step-indicator flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30';
+            if (badge) badge.className = 'w-5 h-5 rounded-full bg-amber-500/30 text-amber-300 flex items-center justify-center text-xs font-black';
+          } else {
+            btn.className = 'step-indicator flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-gray-900 text-gray-500 border border-gray-800';
+            if (badge) badge.className = 'w-5 h-5 rounded-full bg-gray-800 text-gray-400 flex items-center justify-center text-xs font-black';
+          }
+        });
+        window.scrollTo({ top: 120, behavior: 'smooth' });
+      }
+
+      function validateStep1() {
+        const name = document.getElementById('appName').value.trim();
+        const age = parseInt(document.getElementById('appAge').value, 10);
+        const discordTag = document.getElementById('appDiscordTag').value.trim();
+        const discordId = document.getElementById('appDiscordId').value.trim();
+        const charName = document.getElementById('appCharName').value.trim();
+        const country = document.getElementById('appCountry').value.trim();
+
+        if (!name || isNaN(age) || age < 14 || !discordTag || !discordId || !charName || !country) {
+          showToast('يرجى ملء جميع الحقول الإلزامية بالخطوة الأولى والتأكد من إدخال السن بشكل صحيح.', 'error');
+          return false;
+        }
+        return true;
+      }
+
+      function validateStep2() {
+        const exp = document.getElementById('appExp').value.trim();
+        const why = document.getElementById('appWhy').value.trim();
+        const s1 = document.getElementById('appScenario1').value.trim();
+        const s2 = document.getElementById('appScenario2').value.trim();
+
+        if (!exp || !why || !s1 || !s2) {
+          showToast('يرجى كتابة إجابات واضحة على أسئلة الخبرة والسيناريوهات بالخطوة الثانية.', 'error');
+          return false;
+        }
+        return true;
+      }
+
+      function statusBadgeHtml(status) {
+        if (status === 'مقبول') {
+          return '<span class="px-2.5 py-1 rounded-full text-xs font-black bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">مقبول في الإدارة</span>';
+        }
+        if (status === 'مؤهل للمقابلة') {
+          return '<span class="px-2.5 py-1 rounded-full text-xs font-black bg-blue-500/20 text-blue-300 border border-blue-500/40">مؤهل للمقابلة الصوتية</span>';
+        }
+        if (status === 'مرفوض') {
+          return '<span class="px-2.5 py-1 rounded-full text-xs font-black bg-red-500/20 text-red-300 border border-red-500/40">مرفوض</span>';
+        }
+        return '<span class="px-2.5 py-1 rounded-full text-xs font-black bg-amber-500/20 text-amber-300 border border-amber-500/40">قيد المراجعة</span>';
+      }
+
+      function updateCounters() {
+        const total = applications.length;
+        const statTotal = document.getElementById('statTotalApps');
+        const badge1 = document.getElementById('adminBadgeCount');
+        const badge2 = document.getElementById('mobileAdminBadgeCount');
+        if (statTotal) statTotal.textContent = total + ' طلبات';
+        if (badge1) badge1.textContent = String(total);
+        if (badge2) badge2.textContent = String(total);
+
+        const pending = applications.filter(a => a.status === 'قيد المراجعة').length;
+        const interview = applications.filter(a => a.status === 'مؤهل للمقابلة').length;
+        const accepted = applications.filter(a => a.status === 'مقبول').length;
+        const rejected = applications.filter(a => a.status === 'مرفوض').length;
+
+        const kp = document.getElementById('kpiPending');
+        const ki = document.getElementById('kpiInterview');
+        const ka = document.getElementById('kpiAccepted');
+        const kr = document.getElementById('kpiRejected');
+
+        if (kp) kp.textContent = String(pending);
+        if (ki) ki.textContent = String(interview);
+        if (ka) ka.textContent = String(accepted);
+        if (kr) kr.textContent = String(rejected);
+      }
+
+      async function renderTrackResult(query) {
+        const container = document.getElementById('trackResultContainer');
+        const q = (query || '').trim().toLowerCase();
+        if (!q) {
+          showToast('أدخل رقم التقديم أو اسم الديسكورد أولاً.', 'error');
+          return;
+        }
+
+        let found = applications.find(
+          a => a.id.toLowerCase() === q ||
+               a.discordTag.toLowerCase() === q ||
+               a.discordId.toLowerCase() === q
+        );
+
+        if (!found && getCloudDbUrl()) {
+          container.innerHTML = `
+            <div class="p-8 rounded-2xl bg-gray-900/50 border border-gray-800 text-center space-y-3">
+              <div class="inline-block w-8 h-8 border-2 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
+              <p class="text-sm font-bold text-amber-400">جاري البحث في قاعدة البيانات السحابية الحية...</p>
+              <p class="text-xs text-gray-400">يتم فحص الطلبات عبر خوادم V TEXAS RP السحابية</p>
+            </div>
+          `;
+          try {
+            const base = normalizeCloudUrl(getCloudDbUrl());
+            const cleanUpper = q.toUpperCase();
+            let res = await fetch(`${base}/applications/${encodeURIComponent(cleanUpper)}.json`);
+            if (res.ok) {
+              const item = await res.json();
+              if (item && item.id) {
+                found = item;
+                if (!applications.some(a => a.id === found.id)) {
+                  applications.unshift(found);
+                  saveState();
+                }
+              }
+            }
+            if (!found) {
+              const cloudApps = await fetchCloudApplications();
+              if (cloudApps) {
+                found = cloudApps.find(
+                  a => a.id.toLowerCase() === q ||
+                       a.discordTag.toLowerCase() === q ||
+                       a.discordId.toLowerCase() === q
+                );
+                if (found && !applications.some(a => a.id === found.id)) {
+                  applications.unshift(found);
+                  saveState();
+                }
+              }
+            }
+          } catch (e) {
+            console.warn('Cloud track lookup error:', e);
+          }
+        }
+
+        if (!found) {
+          container.innerHTML = `
+            <div class="p-6 rounded-2xl bg-red-950/30 border border-red-500/30 text-center space-y-2">
+              <p class="text-base font-bold text-red-300">لم يتم العثور على أي طلب مطابق لـ "${query}"</p>
+              <p class="text-xs text-gray-400">تأكد من كتابة رقم التقديم المرجعي بشكل صحيح (مثال: VTX-2026-XXXX) أو اسم مستخدم الديسكورد الذي قدمت به.</p>
+            </div>
+          `;
+          return;
+        }
+
+        const isAcceptedOrInterview = found.status === 'مقبول' || found.status === 'مؤهل للمقابلة';
+        const pendingOrOtherDiscordBox = !isAcceptedOrInterview ? `
+          <div class="p-4 rounded-2xl bg-indigo-950/40 border border-indigo-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2 text-gray-200">
+              <span class="text-base">💬</span>
+              <span>سيرفر الديسكورد الرسمي: <strong class="text-indigo-300 font-mono">${DISCORD_INVITE_URL}</strong> — تابع النتائج وتحديثات القبول أولاً بأول.</span>
+            </div>
+            <a href="${DISCORD_INVITE_URL}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl discord-btn text-white font-bold shrink-0 text-center flex items-center justify-center gap-1.5 shadow">
+              <span>دخول الديسكورد ↗</span>
+            </a>
+          </div>
+        ` : '';
+        const postAcceptanceBox = isAcceptedOrInterview
+          ? `
+            <div class="p-5 rounded-2xl bg-emerald-950/40 border-2 border-emerald-500/50 space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h4 class="text-base font-black text-emerald-300">🎉 مبروك! خطوتك التالية لإتمام القبول في الديسكورد:</h4>
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">إجراء إلزامي</span>
+              </div>
+              <p class="text-xs text-gray-200 leading-relaxed">
+                تم اعتماد قرار (${found.status}) من قبل القيادة العليا! لاستكمال استلام رتبتك أو موعد المقابلة، يرجى اتباع الآتي بدقة:
+              </p>
+              <div class="p-4 rounded-xl bg-black/60 border border-emerald-500/30 space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div>
+                    <span class="text-xs text-gray-400 block">رقم التقديم الخاص بك:</span>
+                    <span class="text-xl sm:text-2xl font-black text-amber-400 tracking-wider font-mono">${found.id}</span>
+                  </div>
+                  <button type="button" data-copy-code="${found.id}" class="track-copy-code-btn px-4 py-2 rounded-xl gold-btn text-black font-black text-xs flex items-center justify-center gap-2">
+                    <span>📋 نسخ الرقم الآن</span>
+                  </button>
+                </div>
+                <div class="border-t border-gray-800 pt-3 flex flex-wrap items-center justify-between gap-3">
+                  <div class="text-xs text-gray-300">
+                    رابط سيرفر الديسكورد: <strong class="text-white font-mono">${DISCORD_INVITE_URL}</strong>
+                  </div>
+                  <a href="${DISCORD_INVITE_URL}" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl discord-btn text-white text-xs font-black flex items-center gap-2 shadow-lg">
+                    <span>💬 الدخول للديسكورد وفتح تذكرة</span>
+                    <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                  </a>
+                </div>
+              </div>
+              <div class="text-xs text-emerald-200/90 leading-relaxed space-y-1">
+                <p>📌 <strong>طريقة إرسال التذكرة:</strong> عند دخولك السيرفر، توجه إلى قسم <code>#tickets</code> أو <code>#فتح-تذكرة</code>، اختر تذكرة إدارة والصق بداخلها رقم التقديم <strong>${found.id}</strong> وسيقوم أحد مسؤولي القيادة العليا بمباشرة طلبك فوراً.</p>
+              </div>
+            </div>
+          `
+          : '';
+
+        container.innerHTML = `
+          <div class="p-6 sm:p-8 rounded-3xl glass-card border border-amber-500/30 space-y-6">
+            ${postAcceptanceBox}
+            ${pendingOrOtherDiscordBox}
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-800 pb-5">
+              <div>
+                <span class="text-xs text-gray-400 block mb-1">رقم التقديم المرجعي:</span>
+                <div class="flex items-center gap-3">
+                  <h3 class="text-2xl font-black text-white font-mono">${found.id}</h3>
+                  <button type="button" data-copy-code="${found.id}" class="track-copy-code-btn px-3 py-1 rounded-lg bg-gray-800 hover:bg-gray-700 text-amber-400 text-xs font-bold border border-gray-700 transition">
+                    نسخ الرقم
+                  </button>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                ${statusBadgeHtml(found.status)}
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+              <div class="p-3.5 rounded-xl bg-gray-900 border border-gray-800">
+                <span class="text-gray-400 block mb-1">اسم المتقدم</span>
+                <span class="font-bold text-white text-sm">${found.name}</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-gray-900 border border-gray-800">
+                <span class="text-gray-400 block mb-1">العمر</span>
+                <span class="font-bold text-white text-sm">${found.age} سنة</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-gray-900 border border-gray-800">
+                <span class="text-gray-400 block mb-1">الديسكورد</span>
+                <span class="font-bold text-amber-400 text-sm font-mono">${found.discordTag}</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-gray-900 border border-gray-800">
+                <span class="text-gray-400 block mb-1">القسم المطلوب</span>
+                <span class="font-bold text-white text-sm">${found.department}</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 space-y-1">
+              <span class="text-xs font-bold text-amber-400 block">💬 ملاحظة وتوجيهات القيادة العليا:</span>
+              <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-semibold">${found.adminNote || 'طلبك قيد الدراسة والمراجعة الأولية من قبل القيادة العليا.'}</p>
+            </div>
+
+            <div class="text-[11px] text-gray-500 flex items-center justify-between">
+              <span>تاريخ التقديم: ${found.createdAt}</span>
+              <span>سيرفر V TEXAS RP الرسمي</span>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderAdminDashboard() {
+        const listEl = document.getElementById('adminAppsList');
+        const inspectorEl = document.getElementById('adminAppInspector');
+        const searchQ = (document.getElementById('adminSearchInput').value || '').trim().toLowerCase();
+
+        const filtered = applications.filter(app => {
+          const matchesStatus = currentAdminFilter === 'all' || app.status === currentAdminFilter;
+          const matchesSearch = !searchQ ||
+            app.name.toLowerCase().includes(searchQ) ||
+            app.id.toLowerCase().includes(searchQ) ||
+            app.discordTag.toLowerCase().includes(searchQ) ||
+            app.department.toLowerCase().includes(searchQ);
+          return matchesStatus && matchesSearch;
+        });
+
+        if (filtered.length === 0) {
+          listEl.innerHTML = `
+            <div class="p-6 rounded-2xl glass-card text-center text-gray-400 text-sm">
+              لا توجد طلبات مطابقة للفلتر المحدد.
+            </div>
+          `;
+          inspectorEl.innerHTML = `
+            <div class="h-full flex items-center justify-center text-gray-500 text-sm">
+              اختر طلباً من القائمة لعرض تفاصيله الكاملة.
+            </div>
+          `;
+          return;
+        }
+
+        if (!filtered.some(a => a.id === selectedAdminAppId)) {
+          selectedAdminAppId = filtered[0].id;
+        }
+
+        listEl.innerHTML = filtered.map(app => {
+          const isSelected = app.id === selectedAdminAppId;
+          const activeClass = isSelected ? 'border-amber-500 bg-amber-500/10' : 'border-gray-800 bg-gray-900/60 hover:border-gray-700';
+
+          return `
+            <div data-app-id="${app.id}" class="admin-app-item p-4 rounded-2xl border cursor-pointer transition ${activeClass}">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <span class="text-xs font-mono font-bold text-amber-400">${app.id}</span>
+                ${statusBadgeHtml(app.status)}
+              </div>
+              <h4 class="text-sm font-black text-white">${app.name} (${app.age} سنة)</h4>
+              <div class="text-xs text-gray-400 flex items-center justify-between mt-1">
+                <span>${app.department}</span>
+                <span class="font-mono text-gray-500">${app.discordTag}</span>
+              </div>
+              <div class="text-[11px] text-gray-500 mt-2 flex items-center justify-between">
+                <span>درجة الاختبار: <strong class="text-amber-300">${app.quizScore}%</strong></span>
+                <span>${app.createdAt}</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        const activeApp = applications.find(a => a.id === selectedAdminAppId);
+        if (!activeApp) return;
+
+        inspectorEl.innerHTML = `
+          <div class="glass-card rounded-2xl p-6 space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-gray-800 pb-4">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-mono font-bold text-amber-400">${activeApp.id}</span>
+                  <span class="text-xs text-gray-400">• قدم في: ${activeApp.createdAt}</span>
+                </div>
+                <h3 class="text-xl font-black text-white mt-1">${activeApp.name}</h3>
+                <p class="text-xs text-gray-400 font-mono">${activeApp.discordTag} (${activeApp.discordId})</p>
+              </div>
+              <div>${statusBadgeHtml(activeApp.status)}</div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+              <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                <span class="text-gray-400 block mb-1">العمر الحقيقي</span>
+                <span class="font-bold text-white">${activeApp.age} سنة</span>
+              </div>
+              <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                <span class="text-gray-400 block mb-1">اسم الشخصية</span>
+                <span class="font-bold text-white">${activeApp.charName}</span>
+              </div>
+              <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                <span class="text-gray-400 block mb-1">القسم المطلوب</span>
+                <span class="font-bold text-amber-400">${activeApp.department}</span>
+              </div>
+              <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                <span class="text-gray-400 block mb-1">درجة الاختبار</span>
+                <span class="font-bold text-emerald-400 font-mono">${activeApp.quizScore}% (${activeApp.quizCorrect}/4)</span>
+              </div>
+              <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                <span class="text-gray-400 block mb-1">الدولة</span>
+                <span class="font-bold text-white">${activeApp.country}</span>
+              </div>
+              <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                <span class="text-gray-400 block mb-1">الساعات اليومية</span>
+                <span class="font-bold text-white">${activeApp.hours}</span>
+              </div>
+              <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                <span class="text-gray-400 block mb-1">الفترة</span>
+                <span class="font-bold text-white">${activeApp.shift}</span>
+              </div>
+              <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                <span class="text-gray-400 block mb-1">المايك والتصوير</span>
+                <span class="font-bold text-white truncate block">${activeApp.mic}</span>
+              </div>
+            </div>
+
+            <div class="space-y-3 text-xs">
+              <div class="p-3.5 rounded-xl bg-gray-950 border border-gray-800">
+                <span class="font-bold text-amber-400 block mb-1">الخبرات السابقة في السيرفرات:</span>
+                <p class="text-gray-300 leading-relaxed whitespace-pre-wrap">${activeApp.exp}</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-gray-950 border border-gray-800">
+                <span class="font-bold text-amber-400 block mb-1">لماذا اختار إدارة V TEXAS RP:</span>
+                <p class="text-gray-300 leading-relaxed whitespace-pre-wrap">${activeApp.why}</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-gray-950 border border-gray-800">
+                <span class="font-bold text-amber-400 block mb-1">موقف 1 (تخريب رول بلاي):</span>
+                <p class="text-gray-300 leading-relaxed whitespace-pre-wrap">${activeApp.scenario1}</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-gray-950 border border-gray-800">
+                <span class="font-bold text-amber-400 block mb-1">موقف 2 (اتهام بالانحياز):</span>
+                <p class="text-gray-300 leading-relaxed whitespace-pre-wrap">${activeApp.scenario2}</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-gray-900 border border-amber-500/30 space-y-3">
+              <label class="block text-xs font-bold text-gray-300">ملاحظة القيادة العليا للمتقدم (تظهر للمتقدم عند الاستعلام عن طلبه):</label>
+              <textarea id="adminNoteInput" rows="2" class="w-full rounded-xl bg-gray-950 border border-gray-700 focus:border-amber-500 focus:outline-none p-3 text-xs sm:text-sm text-white">${activeApp.adminNote}</textarea>
+
+              <div class="flex flex-wrap items-center gap-2 pt-1">
+                <button type="button" data-action-status="مقبول" class="admin-status-action px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition">
+                  ✅ قبول نهائي في الإدارة
+                </button>
+                <button type="button" data-action-status="مؤهل للمقابلة" class="admin-status-action px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition">
+                  🎙️ تحويل للمقابلة الصوتية
+                </button>
+                <button type="button" data-action-status="قيد المراجعة" class="admin-status-action px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-black font-bold text-xs transition">
+                  ⏳ تعليق قيد المراجعة
+                </button>
+                <button type="button" data-action-status="مرفوض" class="admin-status-action px-4 py-2.5 rounded-xl bg-red-600/80 hover:bg-red-600 text-white font-bold text-xs transition">
+                  ❌ رفض الطلب
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // ==================== CSV EXPORT ====================
+      function exportDatabaseCsv() {
+        if (applications.length === 0) {
+          showToast('لا توجد أي طلبات لتصديرها حالياً.', 'error');
+          return;
+        }
+        const headers = [
+          'رقم التقديم',
+          'الاسم الكامل',
+          'العمر',
+          'اسم الشخصية (RP)',
+          'يوزر الديسكورد',
+          'آيدي الديسكورد',
+          'الدولة',
+          'القسم المطلوب',
+          'الساعات اليومية',
+          'التوقيت المفضل',
+          'المايك',
+          'درجة الاختبار',
+          'الحالة الإدارية',
+          'تاريخ التقديم',
+          'ملاحظات الإدارة'
+        ];
+
+        const escapeCsv = (val) => {
+          if (val === null || val === undefined) return '""';
+          const s = String(val).replace(/"/g, '""');
+          return `"${s}"`;
+        };
+
+        const rows = applications.map(a => [
+          escapeCsv(a.id),
+          escapeCsv(a.name),
+          escapeCsv(a.age),
+          escapeCsv(a.charName),
+          escapeCsv(a.discordTag),
+          escapeCsv(a.discordId),
+          escapeCsv(a.country),
+          escapeCsv(a.department),
+          escapeCsv(a.hours),
+          escapeCsv(a.shift),
+          escapeCsv(a.mic),
+          escapeCsv(a.quizScore + '%'),
+          escapeCsv(a.status),
+          escapeCsv(a.createdAt),
+          escapeCsv(a.adminNote)
+        ].join(','));
+
+        const csvContent = '\uFEFF' + headers.join(',') + '\r\n' + rows.join('\r\n');
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const dlAnchor = document.createElement('a');
+        dlAnchor.href = url;
+        dlAnchor.download = `v_texas_rp_applications_${new Date().toISOString().slice(0, 10)}.csv`;
+        document.body.appendChild(dlAnchor);
+        dlAnchor.click();
+        dlAnchor.remove();
+        URL.revokeObjectURL(url);
+        showToast('تم تصدير ملف Excel (CSV) بنجاح!', 'info');
+      }
+
+      function handleImportFile(file) {
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          try {
+            const data = JSON.parse(e.target.result);
+            if (!Array.isArray(data)) {
+              showToast('ملف غير صالح: يجب أن يحتوي الملف على مصفوفة طلبات JSON.', 'error');
+              return;
+            }
+            const validApps = data.filter(item => item && item.id && item.name);
+            if (validApps.length === 0) {
+              showToast('لم يتم العثور على أي طلبات صالحة في الملف المرفق.', 'error');
+              return;
+            }
+
+            pendingImportData = validApps;
+            document.getElementById('importSummaryText').textContent = `تم فحص الملف بنجاح والعثور على ${validApps.length} طلب إداري جاهز للدمج.`;
+            const modal = document.getElementById('importConfirmModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+          } catch (err) {
+            showToast('خطأ أثناء قراءة ملف JSON: تأكد من صحة الملف.', 'error');
+          }
+        };
+        reader.readAsText(file);
+      }
+
+      // ==================== EVENT BINDING ====================
+      function bindEvents() {
+        // Navigation Tabs
+        document.querySelectorAll('.nav-tab').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const target = btn.getAttribute('data-nav');
+            if (target) switchView(target);
+          });
+        });
+
+        document.getElementById('brandHomeBtn').addEventListener('click', () => switchView('home'));
+        document.getElementById('headerApplyBtn').addEventListener('click', () => switchView('apply'));
+        document.getElementById('heroStartApplyBtn').addEventListener('click', () => switchView('apply'));
+        document.getElementById('heroTrackBtn').addEventListener('click', () => switchView('track'));
+
+        // Mobile Drawer Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+          const drawer = document.getElementById('mobileMenuDrawer');
+          drawer.classList.toggle('hidden');
+        });
+
+        // Department Cards direct apply
+        document.querySelectorAll('.dept-apply-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const dept = btn.getAttribute('data-select-dept');
+            const selectEl = document.getElementById('appDepartment');
+            if (selectEl && dept) selectEl.value = dept;
+            switchView('apply');
+            setFormStep(1);
+            showToast(`تم اختيار قسم: ${dept}`, 'info');
+          });
+        });
+
+        // Form Step Navigation
+        document.getElementById('toStep2Btn').addEventListener('click', () => {
+          if (validateStep1()) setFormStep(2);
+        });
+        document.getElementById('backToStep1Btn').addEventListener('click', () => setFormStep(1));
+        document.getElementById('toStep3Btn').addEventListener('click', () => {
+          if (validateStep2()) setFormStep(3);
+        });
+        document.getElementById('backToStep2Btn').addEventListener('click', () => setFormStep(2));
+
+        document.querySelectorAll('.step-indicator').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const targetStep = parseInt(btn.getAttribute('data-step-btn'), 10);
+            if (targetStep === 1) setFormStep(1);
+            if (targetStep === 2 && validateStep1()) setFormStep(2);
+            if (targetStep === 3 && validateStep1() && validateStep2()) setFormStep(3);
+          });
+        });
+
+        // Fill Sample Data Button
+        document.getElementById('fillSampleDataBtn').addEventListener('click', () => {
+          document.getElementById('appName').value = 'نواف الشمري';
+          document.getElementById('appAge').value = '22';
+          document.getElementById('appDiscordTag').value = 'nawaf_vtx';
+          document.getElementById('appDiscordId').value = '884729103847561029';
+          document.getElementById('appCharName').value = 'عقاب الشمري';
+          document.getElementById('appCountry').value = 'السعودية (GMT+3)';
+          document.getElementById('appHours').value = '7 - 9 ساعات يومياً';
+          document.getElementById('appExp').value = 'عملت مشرفاً وإدارياً في سيرفرين كبيرين لمدة تزيد عن 10 أشهر ولدي خبرة كاملة في أوامر الـ txAdmin والتعامل مع البلاغات.';
+          document.getElementById('appWhy').value = 'سيرفر V TEXAS RP يتميز ببيئة قوية وأرغب بالمساهمة في استقرار السيرفر ومساعدة اللاعبين الجدد بكل حيادية.';
+          document.getElementById('appScenario1').value = 'أطبق عليه اللائحة الإدارية بكل شفافية دون أي مجاملة، وأوثق الحالة بمقطع فيديو رسمي في روم العقوبات.';
+          document.getElementById('appScenario2').value = 'أستمع إليه بهدوء تام وأحتوي غضبه، ثم أطلب منه إرفاق التصوير أو أراجع السجلات للتأكد من حقه وتعويضه.';
+          document.getElementById('quizQ1').value = 'correct';
+          document.getElementById('quizQ2').value = 'correct';
+          document.getElementById('quizQ3').value = 'correct';
+          document.getElementById('quizQ4').value = 'correct';
+          document.getElementById('appPledge').checked = true;
+          showToast('تمت تعبئة النموذج ببيانات تجريبية، يمكنك مراجعتها وإرسال الطلب!', 'info');
+        });
+
+        // Submit Form
+        document.getElementById('staffAppForm').addEventListener('submit', async (e) => {
+          e.preventDefault();
+          if (!validateStep1() || !validateStep2()) return;
+
+          const q1 = document.getElementById('quizQ1').value;
+          const q2 = document.getElementById('quizQ2').value;
+          const q3 = document.getElementById('quizQ3').value;
+          const q4 = document.getElementById('quizQ4').value;
+          const pledge = document.getElementById('appPledge').checked;
+
+          if (!q1 || !q2 || !q3 || !q4) {
+            showToast('يرجى الإجابة على جميع أسئلة اختبار القوانين الأربعة.', 'error');
+            return;
+          }
+          if (!pledge) {
+            showToast('يرجى الموافقة على التعهد الإداري قبل إرسال الطلب.', 'error');
+            return;
+          }
+
+          let correctCount = 0;
+          if (q1 === 'correct') correctCount++;
+          if (q2 === 'correct') correctCount++;
+          if (q3 === 'correct') correctCount++;
+          if (q4 === 'correct') correctCount++;
+          const scorePercent = Math.round((correctCount / 4) * 100);
+
+          const randomNum = Math.floor(1100 + Math.random() * 8800);
+          const newCode = 'VTX-2026-' + randomNum;
+          lastCreatedCode = newCode;
+
+          const now = new Date();
+          const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+          const newApp = {
+            id: newCode,
+            name: document.getElementById('appName').value.trim(),
+            age: parseInt(document.getElementById('appAge').value, 10),
+            discordTag: document.getElementById('appDiscordTag').value.trim(),
+            discordId: document.getElementById('appDiscordId').value.trim(),
+            charName: document.getElementById('appCharName').value.trim(),
+            country: document.getElementById('appCountry').value.trim(),
+            department: document.getElementById('appDepartment').value,
+            hours: document.getElementById('appHours').value,
+            shift: document.getElementById('appShift').value,
+            mic: document.getElementById('appMic').value,
+            exp: document.getElementById('appExp').value.trim(),
+            why: document.getElementById('appWhy').value.trim(),
+            scenario1: document.getElementById('appScenario1').value.trim(),
+            scenario2: document.getElementById('appScenario2').value.trim(),
+            quizScore: scorePercent,
+            quizCorrect: correctCount,
+            status: 'قيد المراجعة',
+            adminNote: 'تم استلام طلبك بنجاح وهو الآن قيد المراجعة لدى القيادة العليا. احتفظ برقم التقديم (' + newCode + ') واستعلم عنه باستمرار.',
+            createdAt: dateStr
+          };
+
+          applications.unshift(newApp);
+          selectedAdminAppId = newApp.id;
+          saveState();
+          updateCounters();
+
+          // Push to Cloud DB if configured
+          if (getCloudDbUrl() && getCloudAutoSync()) {
+            pushApplicationToCloud(newApp).catch(() => {});
+          }
+
+          // Optional Discord Webhook dispatch
+          const webhookUrl = getWebhookUrl();
+          if (webhookUrl && webhookUrl.startsWith('https://discord.com/api/webhooks/')) {
+            try {
+              await fetch(webhookUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  username: 'V TEXAS RP | بوابة التقديمات',
+                  embeds: [{
+                    title: `📋 تقديم جديد على طاقم الإدارة — ${newApp.id}`,
+                    color: 16096779,
+                    fields: [
+                      { name: 'رقم التقديم', value: newApp.id, inline: true },
+                      { name: 'المتقدم', value: `${newApp.name} (${newApp.age} سنة)`, inline: true },
+                      { name: 'الديسكورد', value: `${newApp.discordTag} (${newApp.discordId})`, inline: true },
+                      { name: 'اسم الشخصية', value: newApp.charName, inline: true },
+                      { name: 'القسم المطلوب', value: newApp.department, inline: true },
+                      { name: 'درجة الاختبار', value: `${newApp.quizScore}% (${newApp.quizCorrect}/4)`, inline: true },
+                      { name: 'الحالة', value: 'قيد المراجعة', inline: true }
+                    ],
+                    footer: { text: 'V TEXAS RP | High Command Staff' },
+                    timestamp: new Date().toISOString()
+                  }]
+                })
+              });
+            } catch (err) {}
+          }
+
+          // Open Success Modal
+          document.getElementById('modalTrackingCode').textContent = newCode;
+          document.getElementById('modalQuizScore').textContent = `${scorePercent}% (${correctCount}/4)`;
+          const modal = document.getElementById('successModal');
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+
+          // Reset Form
+          document.getElementById('staffAppForm').reset();
+          setFormStep(1);
+        });
+
+        // Modal Action Buttons
+        document.getElementById('copyTrackingCodeBtn').addEventListener('click', () => {
+          copyTextToClipboard(lastCreatedCode, `تم نسخ رقم التقديم (${lastCreatedCode}) بنجاح! احفظه للمتابعة.`);
+        });
+
+        document.getElementById('closeSuccessModalBtn').addEventListener('click', () => {
+          const modal = document.getElementById('successModal');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        });
+
+        document.getElementById('modalGoTrackBtn').addEventListener('click', () => {
+          const modal = document.getElementById('successModal');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          switchView('track');
+          document.getElementById('trackSearchInput').value = lastCreatedCode;
+          renderTrackResult(lastCreatedCode);
+        });
+
+        // Track Application Events
+        document.getElementById('trackSearchBtn').addEventListener('click', () => {
+          const q = document.getElementById('trackSearchInput').value;
+          renderTrackResult(q);
+        });
+
+        document.getElementById('trackSearchInput').addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            renderTrackResult(e.target.value);
+          }
+        });
+
+        document.getElementById('trackResultContainer').addEventListener('click', (e) => {
+          const copyBtn = e.target.closest('.track-copy-code-btn');
+          if (copyBtn) {
+            const code = copyBtn.getAttribute('data-copy-code');
+            if (code) {
+              copyTextToClipboard(code, `تم نسخ رقم التقديم (${code})! يمكنك الآن إرساله في تذكرة بالديسكورد.`);
+            }
+          }
+        });
+
+        // Admin Filter Tabs
+        document.querySelectorAll('.admin-filter-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            currentAdminFilter = btn.getAttribute('data-filter-status');
+            document.querySelectorAll('.admin-filter-btn').forEach(b => {
+              b.className = 'admin-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-gray-800 text-gray-300 hover:bg-gray-700';
+            });
+            btn.className = 'admin-filter-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-black shadow';
+            renderAdminDashboard();
+          });
+        });
+
+        document.getElementById('adminSearchInput').addEventListener('input', () => {
+          renderAdminDashboard();
+        });
+
+        // Select App in Admin List
+        document.getElementById('adminAppsList').addEventListener('click', (e) => {
+          const item = e.target.closest('.admin-app-item');
+          if (item) {
+            const id = item.getAttribute('data-app-id');
+            if (id) {
+              selectedAdminAppId = id;
+              renderAdminDashboard();
+            }
+          }
+        });
+
+        // Admin Status Action
+        document.getElementById('adminAppInspector').addEventListener('click', (e) => {
+          const actionBtn = e.target.closest('.admin-status-action');
+          if (actionBtn) {
+            const newStatus = actionBtn.getAttribute('data-action-status');
+            const noteVal = (document.getElementById('adminNoteInput').value || '').trim();
+            const target = applications.find(a => a.id === selectedAdminAppId);
+            if (target) {
+              target.status = newStatus;
+              if (newStatus === 'مقبول' && (!noteVal || noteVal.includes('قيد المراجعة'))) {
+                target.adminNote = `مبروك! تم قبولك في إدارة V TEXAS RP. يرجى نسخ رقم التقديم الخاص بك (${target.id}) والتوجه فوراً إلى سيرفر الديسكورد الرسمي (https://discord.gg/2na3tTWpt) وفتح تذكرة (Ticket) وإرسال رقم التقديم بداخلها لاستلام رتبتك الإدارية.`;
+              } else if (newStatus === 'مؤهل للمقابلة' && (!noteVal || noteVal.includes('قيد المراجعة'))) {
+                target.adminNote = `تم ترشيحك للمقابلة الصوتية في إدارة V TEXAS RP! يرجى نسخ رقم التقديم الخاص بك (${target.id}) والتوجه إلى سيرفر الديسكورد الرسمي (https://discord.gg/2na3tTWpt) وفتح تذكرة (Ticket) وإرسال رقم التقديم لتحديد موعد المقابلة.`;
+              } else if (newStatus === 'مرفوض' && (!noteVal || noteVal.includes('قيد المراجعة'))) {
+                target.adminNote = 'نعتذر عن عدم قبول طلبك في الوقت الحالي. نتمنى لك حظاً أوفر في التقديمات القادمة.';
+              } else if (noteVal) {
+                target.adminNote = noteVal;
+              }
+
+              saveState();
+              updateCounters();
+              renderAdminDashboard();
+
+              // Sync to Cloud DB
+              patchApplicationInCloud(target.id, {
+                status: target.status,
+                adminNote: target.adminNote,
+                updatedAt: new Date().toISOString()
+              });
+
+              showToast(`تم تحديث حالة طلب ${target.name} إلى (${newStatus}) بنجاح!`, 'info');
+            }
+          }
+        });
+
+        // Admin Login Gate
+        document.getElementById('toggleAdminPassBtn').addEventListener('click', () => {
+          const input = document.getElementById('adminPasswordInput');
+          const btn = document.getElementById('toggleAdminPassBtn');
+          if (input.type === 'password') {
+            input.type = 'text';
+            btn.textContent = 'إخفاء';
+          } else {
+            input.type = 'password';
+            btn.textContent = 'إظهار';
+          }
+        });
+
+        document.getElementById('adminAuthForm').addEventListener('submit', (e) => {
+          e.preventDefault();
+          const pass = (document.getElementById('adminPasswordInput').value || '').trim();
+          const errEl = document.getElementById('adminPassError');
+
+          if (ALLOWED_ADMIN_PASSWORDS.includes(pass)) {
+            isAdminAuthenticated = true;
+            errEl.classList.add('hidden');
+            document.getElementById('adminPasswordInput').value = '';
+            document.getElementById('adminLockScreen').classList.add('hidden');
+            document.getElementById('adminProtectedContent').classList.remove('hidden');
+            renderAdminDashboard();
+            updateCounters();
+            updateCloudStatusUI();
+            showToast('مرحباً بك في لوحة القيادة العليا لسيرفر V TEXAS RP!', 'info');
+            if (getCloudDbUrl()) {
+              syncWithCloud(true);
+            }
+          } else {
+            errEl.classList.remove('hidden');
+            showToast('كلمة المرور غير صحيحة، حاول مجدداً.', 'error');
+          }
+        });
+
+        document.getElementById('lockAdminPanelBtn').addEventListener('click', () => {
+          isAdminAuthenticated = false;
+          document.getElementById('adminLockScreen').classList.remove('hidden');
+          document.getElementById('adminProtectedContent').classList.add('hidden');
+          showToast('تم قفل لوحة القيادة العليا بنجاح.', 'info');
+        });
+
+        // Clear Applications in-page modal
+        document.getElementById('clearAllAppsBtn').addEventListener('click', () => {
+          document.getElementById('confirmClearPassInput').value = '';
+          document.getElementById('confirmClearError').classList.add('hidden');
+          const modal = document.getElementById('clearConfirmModal');
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        });
+
+        document.getElementById('cancelClearBtn').addEventListener('click', () => {
+          const modal = document.getElementById('clearConfirmModal');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        });
+
+        document.getElementById('executeClearBtn').addEventListener('click', () => {
+          const pass = (document.getElementById('confirmClearPassInput').value || '').trim();
+          const errEl = document.getElementById('confirmClearError');
+          if (!ALLOWED_ADMIN_PASSWORDS.includes(pass)) {
+            errEl.classList.remove('hidden');
+            return;
+          }
+          applications = [];
+          selectedAdminAppId = null;
+          saveState();
+          idbClear();
+          if (getCloudDbUrl()) {
+            const base = normalizeCloudUrl(getCloudDbUrl());
+            fetch(`${base}/applications.json`, { method: 'DELETE' }).catch(() => {});
+          }
+          renderAdminDashboard();
+          updateCounters();
+          updateCloudStatusUI();
+          const modal = document.getElementById('clearConfirmModal');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          showToast('تم تصفير ومسح كافة الطلبات بنجاح.', 'info');
+        });
+
+        // Webhook Modal
+        document.getElementById('openWebhookModalBtn').addEventListener('click', () => {
+          document.getElementById('webhookUrlInput').value = getWebhookUrl();
+          const modal = document.getElementById('webhookModal');
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        });
+
+        document.getElementById('closeWebhookModalBtn').addEventListener('click', () => {
+          const modal = document.getElementById('webhookModal');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        });
+
+        document.getElementById('saveWebhookBtn').addEventListener('click', () => {
+          const val = document.getElementById('webhookUrlInput').value;
+          setWebhookUrl(val);
+          const modal = document.getElementById('webhookModal');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          showToast(val ? 'تم حفظ رابط الـ Webhook بنجاح!' : 'تم تعطيل ربط الـ Webhook.', 'info');
+        });
+
+        // Cloud DB Modal
+        document.getElementById('openCloudDbModalBtn').addEventListener('click', () => {
+          document.getElementById('cloudDbUrlInput').value = getCloudDbUrl();
+          document.getElementById('cloudAutoSyncCheckbox').checked = getCloudAutoSync();
+          const resultBox = document.getElementById('testConnResultBox');
+          if (resultBox) resultBox.classList.add('hidden');
+          updateCloudStatusUI();
+          const modal = document.getElementById('cloudDbModal');
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        });
+
+        document.getElementById('closeCloudDbModalBtn').addEventListener('click', () => {
+          const modal = document.getElementById('cloudDbModal');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        });
+
+        document.getElementById('toggleDbGuideBtn').addEventListener('click', () => {
+          const content = document.getElementById('dbGuideContent');
+          const arrow = document.getElementById('guideArrow');
+          content.classList.toggle('hidden');
+          arrow.textContent = content.classList.contains('hidden') ? '▼' : '▲';
+        });
+
+        document.getElementById('testCloudDbBtn').addEventListener('click', async () => {
+          const url = document.getElementById('cloudDbUrlInput').value;
+          const resultBox = document.getElementById('testConnResultBox');
+          const cleanUrl = normalizeCloudUrl(url);
+
+          if (!cleanUrl) {
+            resultBox.className = 'p-3 rounded-xl text-xs font-bold border bg-red-950/60 text-red-300 border-red-500/40 block';
+            resultBox.innerHTML = '❌ يرجى إدخال رابط قاعدة البيانات أولاً قبل فحص الاتصال.';
+            return;
+          }
+
+          resultBox.className = 'p-3 rounded-xl text-xs font-bold border bg-amber-950/50 text-amber-300 border-amber-500/40 block';
+          resultBox.innerHTML = '⏳ جاري فحص الاتصال بقاعدة البيانات السحابية وقياس الاستجابة...';
+
+          const startTime = Date.now();
+          try {
+            const res = await fetch(`${cleanUrl}/applications.json`, { method: 'GET', cache: 'no-store' });
+            const elapsed = Date.now() - startTime;
+            if (res.ok) {
+              resultBox.className = 'p-3 rounded-xl text-xs font-bold border bg-emerald-950/70 text-emerald-300 border-emerald-500/50 block';
+              resultBox.innerHTML = `✅ تم الاتصال بنجاح بقاعدة البيانات السحابية! (زمن الاستجابة: ${elapsed}ms). يمكنك الآن حفظ الإعدادات لتبدأ المزامنة الدائمة.`;
+            } else {
+              resultBox.className = 'p-3 rounded-xl text-xs font-bold border bg-red-950/60 text-red-300 border-red-500/40 block';
+              resultBox.innerHTML = `❌ فشل الاتصال (كود ${res.status}): تأكد من أن قواعد الحماية (Rules) في Firebase تسمح بالقراءة والكتابة (".read": true, ".write": true).`;
+            }
+          } catch (err) {
+            resultBox.className = 'p-3 rounded-xl text-xs font-bold border bg-red-950/60 text-red-300 border-red-500/40 block';
+            resultBox.innerHTML = `❌ تعذر الوصول للرابط: تأكد من كتابة الرابط بشكل صحيح مع https وأن اتصال الإنترنت يعمل. (${err.message})`;
+          }
+        });
+
+        document.getElementById('forceUploadLocalToCloudBtn').addEventListener('click', async () => {
+          const url = document.getElementById('cloudDbUrlInput').value;
+          const clean = normalizeCloudUrl(url);
+          if (!clean) {
+            showToast('أدخل رابط قاعدة البيانات السحابية أولاً.', 'error');
+            return;
+          }
+          if (applications.length === 0) {
+            showToast('لا توجد طلبات محلية لرفعها حالياً.', 'error');
+            return;
+          }
+          const btn = document.getElementById('forceUploadLocalToCloudBtn');
+          const originalText = btn.innerHTML;
+          btn.innerHTML = '<span>⏳</span><span>جاري الرفع...</span>';
+          try {
+            let okCount = 0;
+            for (const app of applications) {
+              const ok = await pushApplicationToCloud(app);
+              if (ok) okCount++;
+            }
+            showToast(`✅ تم رفع ${okCount} من أصل ${applications.length} طلب إلى السحابة بنجاح!`, 'info');
+          } catch (e) {
+            showToast('حدث خطأ أثناء رفع البيانات إلى السحابة.', 'error');
+          } finally {
+            btn.innerHTML = originalText;
+          }
+        });
+
+        document.getElementById('disconnectCloudDbBtn').addEventListener('click', () => {
+          setCloudDbUrl('');
+          document.getElementById('cloudDbUrlInput').value = '';
+          updateCloudStatusUI();
+          showToast('تم إلغاء ربط قاعدة البيانات السحابية، والاعتماد على التخزين المحلي الدائم IndexedDB.', 'info');
+        });
+
+        document.getElementById('saveCloudDbSettingsBtn').addEventListener('click', async () => {
+          const url = document.getElementById('cloudDbUrlInput').value.trim();
+          const autoSync = document.getElementById('cloudAutoSyncCheckbox').checked;
+
+          setCloudDbUrl(url);
+          setCloudAutoSync(autoSync);
+
+          const modal = document.getElementById('cloudDbModal');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+
+          updateCloudStatusUI();
+
+          if (url) {
+            showToast('تم حفظ إعدادات قاعدة البيانات السحابية بنجاح! جاري المزامنة...', 'info');
+            await syncWithCloud(false);
+          } else {
+            showToast('تم حفظ الإعدادات والاعتماد على التخزين المحلي الدائم.', 'info');
+          }
+        });
+
+        document.getElementById('syncCloudDbBtn').addEventListener('click', () => {
+          syncWithCloud(false);
+        });
+
+        // Export JSON
+        document.getElementById('exportAppsJsonBtn').addEventListener('click', () => {
+          const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(applications, null, 2));
+          const dlAnchor = document.createElement('a');
+          dlAnchor.setAttribute('href', dataStr);
+          dlAnchor.setAttribute('download', `v_texas_rp_applications_${new Date().toISOString().slice(0, 10)}.json`);
+          document.body.appendChild(dlAnchor);
+          dlAnchor.click();
+          dlAnchor.remove();
+          showToast('تم تصدير ملف النسخة الاحتياطية (JSON) بنجاح.', 'info');
+        });
+
+        // Export CSV
+        document.getElementById('exportAppsCsvBtn').addEventListener('click', () => {
+          exportDatabaseCsv();
+        });
+
+        // Import JSON
+        document.getElementById('importAppsJsonTriggerBtn').addEventListener('click', () => {
+          document.getElementById('importJsonFileInput').click();
+        });
+
+        document.getElementById('importJsonFileInput').addEventListener('change', (e) => {
+          const file = e.target.files && e.target.files[0];
+          if (file) {
+            handleImportFile(file);
+            e.target.value = '';
+          }
+        });
+
+        document.getElementById('cancelImportBtn').addEventListener('click', () => {
+          pendingImportData = null;
+          const modal = document.getElementById('importConfirmModal');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        });
+
+        document.getElementById('executeImportBtn').addEventListener('click', () => {
+          if (!pendingImportData) return;
+          const map = new Map();
+          applications.forEach(a => { if (a && a.id) map.set(a.id, a); });
+          pendingImportData.forEach(a => { if (a && a.id) map.set(a.id, a); });
+          applications = Array.from(map.values());
+          applications.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+
+          saveState();
+          updateCounters();
+          renderAdminDashboard();
+          updateCloudStatusUI();
+
+          const count = pendingImportData.length;
+          pendingImportData = null;
+          const modal = document.getElementById('importConfirmModal');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+
+          showToast(`✅ تم استيراد ودمج ${count} طلب بنجاح في قاعدة البيانات!`, 'info');
+
+          if (getCloudDbUrl()) {
+            syncWithCloud(true);
+          }
+        });
+      }
+
+      loadState();
+      updateCounters();
+      bindEvents();
+    })();
+  </script>
+
+
+  <!-- Floating Discord Action Button -->
+  <aside aria-label="رابط ديسكورد تكساس رول بلاي">
+    <a href="https://discord.gg/2na3tTWpt" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 left-6 z-40 discord-btn text-white font-bold text-xs sm:text-sm px-4 py-3 rounded-2xl flex items-center gap-2.5 shadow-2xl hover:scale-105 transition-all border border-indigo-400/50 group">
+      <span class="relative flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+      </span>
+      <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 127.14 96.36"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,45.91,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,45.91,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+      <span>سيرفر الديسكورد</span>
+      <span class="hidden group-hover:inline-block font-mono text-[11px] bg-indigo-900/60 px-2 py-0.5 rounded border border-indigo-400/40">2na3tTWpt</span>
+    </a>
+  </aside>
+
+</body>
+</html>
